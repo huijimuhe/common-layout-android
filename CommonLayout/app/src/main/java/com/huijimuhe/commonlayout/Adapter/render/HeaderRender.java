@@ -2,8 +2,8 @@ package com.huijimuhe.commonlayout.adapter.render;
 
 import android.view.View;
 
-import com.huijimuhe.group.Adapter.base.AbstractRender;
-import com.huijimuhe.group.Adapter.base.AbstractViewHolder;
+import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
+import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
 
 
 /**

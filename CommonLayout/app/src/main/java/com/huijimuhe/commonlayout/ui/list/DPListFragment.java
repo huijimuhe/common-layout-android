@@ -18,10 +18,10 @@ import android.support.v4.app.Fragment;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class XCListFragment extends Fragment {
+public class DPListFragment extends Fragment {
 
-    public static XCListFragment newInstance() {
-        XCListFragment fragment = new XCListFragment();
+    public static DPListFragment newInstance() {
+        DPListFragment fragment = new DPListFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;

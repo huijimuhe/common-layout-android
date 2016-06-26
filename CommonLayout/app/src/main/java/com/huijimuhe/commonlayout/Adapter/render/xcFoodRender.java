@@ -5,10 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.huijimuhe.group.Adapter.base.AbstractRender;
-import com.huijimuhe.group.Adapter.base.AbstractRenderAdapter;
-import com.huijimuhe.group.Adapter.base.AbstractViewHolder;
-import com.huijimuhe.group.R;
+import com.huijimuhe.commonlayout.R;
+import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
+import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
+import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
 
 
 /**

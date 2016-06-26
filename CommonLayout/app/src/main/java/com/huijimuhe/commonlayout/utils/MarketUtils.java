@@ -9,7 +9,8 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.huijimuhe.monolog.AppContext;
+
+import com.huijimuhe.commonlayout.AppContext;
 
 import java.util.ArrayList;
 import java.util.List;

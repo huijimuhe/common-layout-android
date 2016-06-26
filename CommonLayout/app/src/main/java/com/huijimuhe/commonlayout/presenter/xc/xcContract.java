@@ -1,7 +1,8 @@
 package com.huijimuhe.commonlayout.presenter.xc;
 
-import com.huijimuhe.group.presenter.BasePresenter;
-import com.huijimuhe.group.presenter.BaseView;
+
+import com.huijimuhe.commonlayout.presenter.BasePresenter;
+import com.huijimuhe.commonlayout.presenter.BaseView;
 
 /**
  * Created by Huijimuhe on 2016/6/26.
@@ -10,11 +11,11 @@ import com.huijimuhe.group.presenter.BaseView;
  */
 public class xcContract {
 
-    interface View extends BaseView<Presenter>{
+    interface View extends BaseView<Presenter> {
 
     }
 
-    interface Presenter extends BasePresenter{
+    interface Presenter extends BasePresenter {
 
     }
 }

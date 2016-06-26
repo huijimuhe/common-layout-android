@@ -5,7 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.huijimuhe.group.Adapter.render.HeaderRender;
+
+import com.huijimuhe.commonlayout.adapter.render.HeaderRender;
 
 import java.util.List;
 
