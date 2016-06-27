@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--com.huijimuhe.commonlayout.widget.TabItem-->
+    <attr name="titleTabText" format="string" />
+    <attr name="titleNormalTextSize" format="dimension" />
+    <attr name="titleSelectedTextSize" format="dimension" />
+    <attr name="titleDivider" format="reference" />
+    <attr name="titleColor" format="reference"/>
+    <declare-styleable name="TabItem">
+        <attr name="titleTabText" />
+        <attr name="titleNormalTextSize" />
+        <attr name="titleSelectedTextSize" />
+        <attr name="titleDivider" />
+        <attr name="titleColor"/>
+    </declare-styleable>
+</resources>

@@ -1,7 +1,8 @@
-package com.huijimuhe.commonlayout.ui.list;
+package com.huijimuhe.commonlayout.widget;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.TextView;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
@@ -18,12 +19,21 @@ import android.support.v4.app.Fragment;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class DPListFragment extends Fragment {
+public class LikeButtonList extends TextView {
 
-    public static DPListFragment newInstance() {
-        DPListFragment fragment = new DPListFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
+    public LikeButtonList(Context context) {
+        super(context);
+    }
+
+    public LikeButtonList(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public LikeButtonList(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public LikeButtonList(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
     }
 }

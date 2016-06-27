@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.huijimuhe.commonlayout.widget.BannerView
+        android:id="@+id/advertise_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="169.0dip"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointAutoPlayInterval="3000"
+        app:banner_pointGravity="center_horizontal"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointTopBottomMargin="15dp"/>
+
+    <RelativeLayout
+        android:id="@+id/sale_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xc_titleline_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7.0dip"
+                    android:layout_marginRight="7.0dip"
+                    android:text="今日热卖"
+                    android:textColor="@android:color/black"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xc_titleline_right" />
+            </LinearLayout>
+
+            <com.huijimuhe.commonlayout.widget.LetterSpacingTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:layout_marginTop="1.0dip"
+                android:text="BESTSELLERS"
+                android:textColor="@android:color/black"
+                android:textSize="7.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/all_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/xc_selector_toolbar_button_light"
+            android:drawablePadding="5.0dip"
+            android:drawableRight="@drawable/xc_enter_gray"
+            android:gravity="center"
+            android:padding="7.0dip"
+            android:text="全部"
+            android:textColor="#ff888888"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <com.huijimuhe.commonlayout.widget.NoScrollRecyclerView
+        android:id="@+id/sale_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-11.0dip"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0dip"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0.0dip"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="7.0dip"
+        android:paddingRight="7.0dip"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/week_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xc_titleline_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7.0dip"
+                    android:layout_marginRight="7.0dip"
+                    android:text="本周最赞"
+                    android:textColor="@android:color/black"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xc_titleline_right" />
+            </LinearLayout>
+
+            <com.huijimuhe.commonlayout.widget.LetterSpacingTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:layout_marginTop="1.0dip"
+                android:text="WEEKTOP20"
+                android:textColor="@android:color/black"
+                android:textSize="7.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/all_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/xc_selector_toolbar_button_light"
+            android:drawablePadding="5.0dip"
+            android:drawableRight="@drawable/xc_enter_gray"
+            android:gravity="center"
+            android:padding="7.0dip"
+            android:text="全部"
+            android:textColor="#ff888888"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/week_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:duplicateParentState="true"
+        android:overScrollMode="never"
+        android:paddingLeft="7.0dip"
+        android:requiresFadingEdge="none" />
+
+    <View
+        android:id="@+id/handpick_tab_divider_top"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/divider" />
+
+    <include
+        layout="@layout/listheader_xc_tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/handpick_tab_divider_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginBottom="@dimen/xc_article_list_divider"
+        android:background="@color/divider" />
+</LinearLayout>

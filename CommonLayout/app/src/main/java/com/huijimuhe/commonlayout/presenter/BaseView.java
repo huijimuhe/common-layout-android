@@ -17,5 +17,11 @@
 package com.huijimuhe.commonlayout.presenter;
 
 public interface BaseView<T> {
+    void showSwipe(boolean isActive);
 
+    void showLoading(boolean isActive);
+
+    void showError();
+
+    void showContent();
 }

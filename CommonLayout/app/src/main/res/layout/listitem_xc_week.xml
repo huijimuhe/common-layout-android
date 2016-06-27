@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="149.0dip"
+    android:layout_height="wrap_content"
+    android:paddingRight="7.0dip"
+    android:duplicateParentState="true">
+
+    <ImageView
+        android:id="@+id/week_image"
+        android:layout_width="149.0dip"
+        android:layout_height="112.0dip"
+        android:scaleType="centerCrop"
+        android:src="@color/black_alpha_20" />
+
+    <ImageView
+        android:id="@+id/week_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginTop="6.0dip"
+        android:src="@drawable/xc_num_1"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="149.0dip"
+        android:layout_height="112.0dip"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/xc_selector_article_item" />
+
+    <TextView
+        android:id="@+id/week_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/week_image"
+        android:layout_marginTop="11.0dip"
+        android:singleLine="true"
+        android:text="四川火锅竟然能精致成这样！"
+        android:textColor="#ff000000"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@+id/week_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/week_text"
+        android:layout_marginTop="5.0dip"
+        android:singleLine="true"
+        android:text="赞 330"
+        android:textColor="#ff797979"
+        android:textSize="11.0sp" />
+</RelativeLayout>

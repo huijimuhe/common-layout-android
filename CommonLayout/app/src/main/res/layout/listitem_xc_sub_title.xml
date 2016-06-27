@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="186.0dip"
+    android:paddingLeft="@dimen/xc_article_list_divider"
+    android:paddingRight="@dimen/xc_article_list_divider">
+
+</RelativeLayout>

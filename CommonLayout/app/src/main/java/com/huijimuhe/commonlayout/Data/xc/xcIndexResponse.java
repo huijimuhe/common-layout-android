@@ -1,5 +1,7 @@
 package com.huijimuhe.commonlayout.data.xc;
 
+import java.util.List;
+
 /**
  * Created by Huijimuhe on 2016/6/22.
  * This is a part of Lanwen
@@ -7,115 +9,58 @@ package com.huijimuhe.commonlayout.data.xc;
  */
 public class xcIndexResponse {
 
+    private List<xcBanner> ads_top;
+    private List<xcSale> sales;
+    private List<xcArticle> week_praise;
+    private List<xcArticleGroup> subjects;
+    private List<xcArticle> foods;
+    private List<xcArticle> plays;
 
-    /**
-     * code : 0
-     * msg : success
-     */
-
-    private int code;
-    private String msg;
-
-    public void setCode(int code) {
-        this.code = code;
+    public List<xcBanner> getAds_top() {
+        return ads_top;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setAds_top(List<xcBanner> ads_top) {
+        this.ads_top = ads_top;
     }
 
-    public int getCode() {
-        return code;
+    public List<xcSale> getSales() {
+        return sales;
     }
 
-    public String getMsg() {
-        return msg;
+    public void setSales(List<xcSale> sales) {
+        this.sales = sales;
     }
 
-    public class Banner{
+    public List<xcArticle> getWeek_praise() {
+        return week_praise;
+    }
 
-        /**
-         * id : 1249
-         * type : 2
-         * title : 钢琴体验券免费送
-         * desc : 星空琴行-渠道（吴春威）
-         * image : http://ww4.sinaimg.cn/large/6ef77e5ejw3f51u8t8xjtj20hs08c0vc.jpg
-         * start_time : 2016-06-22 14:35:28
-         * url : http://www.51xiancheng.com/article/40634
-         * article_id : 40634
-         */
+    public void setWeek_praise(List<xcArticle> week_praise) {
+        this.week_praise = week_praise;
+    }
 
-        private int id;
-        private int type;
-        private String title;
-        private String desc;
-        private String image;
-        private String start_time;
-        private String url;
-        private int article_id;
+    public List<xcArticleGroup> getSubjects() {
+        return subjects;
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public void setSubjects(List<xcArticleGroup> subjects) {
+        this.subjects = subjects;
+    }
 
-        public void setType(int type) {
-            this.type = type;
-        }
+    public List<xcArticle> getFoods() {
+        return foods;
+    }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
+    public void setFoods(List<xcArticle> foods) {
+        this.foods = foods;
+    }
 
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
+    public List<xcArticle> getPlays() {
+        return plays;
+    }
 
-        public void setImage(String image) {
-            this.image = image;
-        }
-
-        public void setStart_time(String start_time) {
-            this.start_time = start_time;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-        public void setArticle_id(int article_id) {
-            this.article_id = article_id;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public int getType() {
-            return type;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public String getImage() {
-            return image;
-        }
-
-        public String getStart_time() {
-            return start_time;
-        }
-
-        public String getUrl() {
-            return url;
-        }
-
-        public int getArticle_id() {
-            return article_id;
-        }
+    public void setPlays(List<xcArticle> plays) {
+        this.plays = plays;
     }
 }
