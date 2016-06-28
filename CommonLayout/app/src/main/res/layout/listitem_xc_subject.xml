@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="120.0dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/subject_item_divider_top"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentTop="true"
+        android:src="@color/divider" />
+
+    <ImageView
+        android:id="@+id/subject_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject_item_divider_top"
+        android:src="@drawable/xc_category_delicacies"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12.0dip" />
+
+    <TextView
+        android:id="@+id/subject_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject_item_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6.0dip"
+        android:textColor="#ff000000"
+        android:text="大周一 吃鱼不摸鱼"
+        android:textSize="20.0sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject_item_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3.0dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/subject_item_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffa9a9a9"
+            android:text="越吃越快 美味停不下来"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="1.0px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="7.0dip"
+            android:layout_marginRight="7.0dip"
+            android:paddingBottom="1.0dip"
+            android:paddingTop="1.0dip"
+            android:src="#ffd1d1d1" />
+
+        <TextView
+            android:id="@+id/subject_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffa9a9a9"
+            android:text="2016年6月28日"
+            android:textSize="10.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/xc_article_list_divider"
+        android:src="@color/divider" />
+</RelativeLayout>

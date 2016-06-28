@@ -17,12 +17,13 @@ public class xcPresenter implements xcContract.Presenter {
     private xcContract.View mView;
 
     public xcPresenter(xcContract.View view, xcRepository repo) {
+        this.mView=view;
         this.mRepo = repo;
     }
 
     @Override
     public void start() {
-        mView.showContent();
+        mView.showContainer();
     }
 
     @Override
@@ -32,7 +33,7 @@ public class xcPresenter implements xcContract.Presenter {
             @Override
             public void onSuccess(xcIndexResponse response) {
                 mView.showSwipe(false);
-                mView.showList(response);
+                mView.updateList(response);
             }
 
             @Override
@@ -40,5 +41,10 @@ public class xcPresenter implements xcContract.Presenter {
                 mView.showSwipe(false);
             }
         });
+    }
+
+    @Override
+    public void switchAdapter(int index) {
+
     }
 }

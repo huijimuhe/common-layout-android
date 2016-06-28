@@ -1,4 +1,4 @@
-package com.huijimuhe.commonlayout;
+package com.huijimuhe.commonlayout.ui;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -7,10 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.bumptech.glide.Glide;
+import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.adapter.xcSaleAdapter;
 import com.huijimuhe.commonlayout.adapter.xcWeekAdapter;
@@ -21,8 +19,6 @@ import com.huijimuhe.commonlayout.utils.ToastUtils;
 import com.huijimuhe.commonlayout.widget.BannerView;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 import com.huijimuhe.commonlayout.widget.SwitchTabView;
-
-import org.jetbrains.annotations.NotNull;
 
 public class TestActivity extends AppCompatActivity {
 

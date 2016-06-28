@@ -16,9 +16,9 @@ import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
- * <p>
+ * <p/>
  * Contact: 20903213@qq.com Zengweizhou
- * <p>
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -42,12 +42,12 @@ public abstract class abLceListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.fragment_list,null);
+        View v = inflater.inflate(R.layout.fragment_list, null);
 
         //Lce
-        mContentView=v.findViewById(R.id.contentview);
-        mErrorView=v.findViewById(R.id.emptyview);
-        mLoadingView=v.findViewById(R.id.loadingview);
+        mContentView = v.findViewById(R.id.contentview);
+        mErrorView = v.findViewById(R.id.emptyview);
+        mLoadingView = v.findViewById(R.id.loadingview);
 
         //swipe refresh layout
         mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_container);
@@ -55,13 +55,14 @@ public abstract class abLceListFragment extends Fragment {
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                loadData();
+                mSwipeRefreshLayout.setRefreshing(false);
+                //loadData();
             }
         });
 
         //recycler view
-        mRecyclerView = (RecyclerView)v.findViewById(R.id.listview);
-        LinearLayoutManager  mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView = (RecyclerView) v.findViewById(R.id.listview);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -87,14 +88,14 @@ public abstract class abLceListFragment extends Fragment {
 
 
     @UiThread
-    protected void showLoadingView(){
+    protected void showLoadingView() {
         mContentView.setVisibility(View.GONE);
         mErrorView.setVisibility(View.GONE);
         mLoadingView.setVisibility(View.VISIBLE);
     }
 
     @UiThread
-    protected void showSwipeView(final boolean active){
+    protected void showSwipeView(final boolean active) {
         mSwipeRefreshLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -103,17 +104,18 @@ public abstract class abLceListFragment extends Fragment {
             }
         }, 500);
     }
+
     @UiThread
-    protected void showEmptyView(){
-        mContentView.setVisibility(View.VISIBLE);
-        mErrorView.setVisibility(View.GONE);
+    protected void showEmptyView() {
+        mContentView.setVisibility(View.GONE);
+        mErrorView.setVisibility(View.VISIBLE);
         mLoadingView.setVisibility(View.GONE);
     }
 
     @UiThread
-    protected void showContentView(){
-        mContentView.setVisibility(View.GONE);
-        mErrorView.setVisibility(View.VISIBLE);
+    protected void showContentView() {
+        mContentView.setVisibility(View.VISIBLE);
+        mErrorView.setVisibility(View.GONE);
         mLoadingView.setVisibility(View.GONE);
     }
 

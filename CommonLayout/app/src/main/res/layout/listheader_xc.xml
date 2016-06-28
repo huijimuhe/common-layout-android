@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <com.huijimuhe.commonlayout.widget.BannerView
@@ -11,9 +11,9 @@
         android:layout_height="169.0dip"
         app:banner_pointAutoPlayAble="true"
         app:banner_pointAutoPlayInterval="3000"
-        app:banner_pointGravity="center_horizontal"
         app:banner_pointContainerBackground="@android:color/transparent"
-        app:banner_pointTopBottomMargin="15dp"/>
+        app:banner_pointGravity="center_horizontal"
+        app:banner_pointTopBottomMargin="15dp" />
 
     <RelativeLayout
         android:id="@+id/sale_title"
@@ -164,12 +164,11 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/week_list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:clipToPadding="false"
         android:duplicateParentState="true"
         android:overScrollMode="never"
-        android:paddingLeft="7.0dip"
-        android:requiresFadingEdge="none" />
+        android:paddingLeft="7.0dip" />
 
     <View
         android:id="@+id/handpick_tab_divider_top"
@@ -180,10 +179,28 @@
         android:layout_marginTop="10.0dip"
         android:background="@color/divider" />
 
-    <include
-        layout="@layout/listheader_xc_tab_layout"
+    <com.huijimuhe.commonlayout.widget.SwitchTabView
+        android:id="@+id/handpick_tab"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="@drawable/xc_shape_tab_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <com.huijimuhe.commonlayout.widget.TabItem
+            style="@style/TabItem"
+            app:titleTabText="精选" />
+
+        <com.huijimuhe.commonlayout.widget.TabItem
+            style="@style/TabItem"
+            app:titleTabText="美食" />
+
+        <com.huijimuhe.commonlayout.widget.TabItem
+            style="@style/TabItem"
+            app:titleTabText="玩乐" />
+    </com.huijimuhe.commonlayout.widget.SwitchTabView>
 
     <View
         android:id="@+id/handpick_tab_divider_bottom"

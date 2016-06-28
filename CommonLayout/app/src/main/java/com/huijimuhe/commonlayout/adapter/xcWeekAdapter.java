@@ -37,7 +37,7 @@ public class xcWeekAdapter extends AbstractAdapter<xcWeekAdapter.ViewHolder> {
 
     public xcWeekAdapter(List<xcArticle> data, Context context) {
         mDataset = data;
-        mContext=context;
+        mContext = context;
     }
 
     @Override
@@ -51,13 +51,18 @@ public class xcWeekAdapter extends AbstractAdapter<xcWeekAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mTvTitle.setText(mDataset.get(position).getTitle());
-        holder.mTvLike.setText(String.format("赞  %s",mDataset.get(position).getPraise_count()));
+        holder.mTvLike.setText(String.format("赞  %s", mDataset.get(position).getPraise_count()));
         Glide.with(mContext).load(mDataset.get(position).getFull_image()).into(holder.mIvBanner);
     }
 
     @Override
     public int getItemCount() {
         return mDataset.size();
+    }
+
+    public void replace(List<xcArticle> data) {
+        mDataset = data;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -69,7 +74,7 @@ public class xcWeekAdapter extends AbstractAdapter<xcWeekAdapter.ViewHolder> {
             super(v);
             mTvTitle = (TextView) v.findViewById(R.id.week_text);
             mTvLike = (TextView) v.findViewById(R.id.week_count);
-            mIvBanner=(ImageView)v.findViewById(R.id.week_image);
+            mIvBanner = (ImageView) v.findViewById(R.id.week_image);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

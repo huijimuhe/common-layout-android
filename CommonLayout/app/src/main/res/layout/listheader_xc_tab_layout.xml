@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.huijimuhe.commonlayout.widget.SwitchTabView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.huijimuhe.commonlayout.widget.SwitchTabView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/handpick_tab"
     android:layout_width="fill_parent"
@@ -11,12 +10,15 @@
     android:orientation="horizontal"
     android:showDividers="middle">
 
-    <TabItem
+    <com.huijimuhe.commonlayout.widget.TabItem
+        style="@style/TabItem"
         app:titleTabText="精选" />
 
-    <TabItem
+    <com.huijimuhe.commonlayout.widget.TabItem
+        style="@style/TabItem"
         app:titleTabText="美食" />
 
-    <TabItem
+    <com.huijimuhe.commonlayout.widget.TabItem
+        style="@style/TabItem"
         app:titleTabText="玩乐" />
 </com.huijimuhe.commonlayout.widget.SwitchTabView>

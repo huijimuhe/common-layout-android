@@ -1,72 +1,68 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_container"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/contentview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <LinearLayout
-                android:id="@+id/contentview"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:layout_height="match_parent" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/listview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </LinearLayout>
+        </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/loadingview"
+        <LinearLayout
+            android:id="@+id/loadingview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Large.Circle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorAccent" />
 
-                <com.github.ybq.android.spinkit.SpinKitView
-                    android:id="@+id/spin_kit"
-                    style="@style/SpinKitView.Large.Circle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:SpinKit_Color="@color/colorAccent" />
+        </LinearLayout>
 
-            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/emptyview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <LinearLayout
-                android:id="@+id/emptyview"
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/main_ic_loop" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:layout_gravity="center"
+                android:text="无数据" />
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/main_ic_loop" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="无数据" />
-
-            </LinearLayout>
-        </RelativeLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
-</FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -26,7 +26,7 @@ public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<Abst
     public onItemClickListener mOnItemClickListener;
     public onItemFunctionClickListener mOnItemFunctionClickListener;
 
-    protected View mHeaderView;
+    private View mHeaderView;
     // protected AbstractRender mRender;
 
     @Override
@@ -51,18 +51,19 @@ public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<Abst
         }
     }
 
+    @Override
+    public int getItemCount() {
+        return hasHeaderView() ? mDataset.size() + 1 : mDataset.size();
+    }
 
     public void replace(List<T> data) {
-        this.mDataset.clear();
         this.mDataset = data;
         notifyDataSetChanged();
     }
 
     public void remove(T data) {
-
-        int position = mDataset.indexOf(data);
         this.mDataset.remove(data);
-        notifyItemRemoved(hasHeaderView() && position != 0 ? position + 1 : position);
+        notifyDataSetChanged();
     }
 
     public void addAll(List<T> data) {
@@ -89,10 +90,6 @@ public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<Abst
 
     public void setHeaderView(View view) {
         mHeaderView = view;
-    }
-
-    public View getHeaderView() {
-        return mHeaderView;
     }
 
     public void setOnItemClickListener(onItemClickListener l) {
