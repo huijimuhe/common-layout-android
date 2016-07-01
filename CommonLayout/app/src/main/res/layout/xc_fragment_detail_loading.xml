@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/progress_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/xc_article_image_height"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/xc_article_image_height"
+            android:background="#ffc4c4c4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="100.0dip"
+                android:layout_height="15.0dip"
+                android:background="@drawable/xc_shape_ellipse_white" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="2.0dip"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="250.0dip"
+                android:layout_height="15.0dip"
+                android:layout_marginTop="18.0dip"
+                android:background="@drawable/xc_shape_ellipse_white" />
+
+            <View
+                android:layout_width="100.0dip"
+                android:layout_height="15.0dip"
+                android:layout_marginTop="6.0dip"
+                android:background="@drawable/xc_shape_ellipse_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_header"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="22.0dip"
+        android:paddingRight="22.0dip">
+
+        <View
+            android:id="@+id/article_author_header"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="13.0dip"
+            android:background="@drawable/xc_shape_circle_gray" />
+
+        <View
+            android:id="@+id/article_author_name"
+            android:layout_width="100.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="6.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:id="@+id/article_author_des"
+            android:layout_width="160.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginTop="11.0dip"
+            android:background="@color/divider" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="13.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="7.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15.0dip"
+            android:layout_marginBottom="14.0dip"
+            android:layout_marginTop="7.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_user"
+        android:layout_marginTop="10.0dip"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingLeft="22.0dip"
+        android:paddingRight="22.0dip">
+
+        <View
+            android:layout_width="220.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginBottom="17.0dip"
+            android:layout_marginTop="17.0dip"
+            android:background="@drawable/xc_shape_ellipse_yellow" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/divider" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="7.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="190.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="7.0dip"
+            android:background="@drawable/xc_shape_ellipse_grey" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginTop="7.0dip"
+            android:background="#ffe0e0e0" />
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="120.0dip" />
+</RelativeLayout>

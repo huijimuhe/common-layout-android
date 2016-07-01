@@ -80,7 +80,7 @@ public class SwitchTabView extends LinearLayout implements View.OnClickListener 
         }
     }
 
-    protected void setSelected(int index) {
+    public void setSelected(int index) {
         for (int i = 0; i < getChildCount(); i++) {
             getChildAt(i).setSelected(false);
         }

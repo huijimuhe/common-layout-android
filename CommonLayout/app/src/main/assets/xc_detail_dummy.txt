@@ -1,0 +1,697 @@
+﻿ {
+        "article": {
+            "body": [
+                [
+                    {
+                        "type": 1,
+                        "object": {
+                            "title1": "九栖(翡翠城店)",
+                            "title2": ""
+                        }
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "成都这座慢城市，除了火锅串串外，最多的就是咖啡店。全成都咖啡馆约有4000度家，比文艺著称的厦门多，比小资的南京杭州都多，这么多的咖啡店，都快赶上繁华的帝都了。所以，在成都喝咖啡，是一种生活态度。而九栖，正好就能满足你对顶级咖啡店的所有幻想，从环境、细节、逼格体验、服务饮品、甜品、菜品，在成都绝对能入前三！"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/3ad8ff7ba6c4ed0566120eb0b6efc0ae.jpg",
+                                "text": "有胆开在星巴克楼上",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/fefede45cba934844a729167346c20bd.jpg",
+                                "text": "圆木质的风格",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/a21183b6468b4cc69c20f56d50629aa9.jpg",
+                                "text": "圆木质的风格",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/39aadd5e38b6cc6aa507296c46d2d5f4.jpg",
+                                "text": "圆木质的风格",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/d70ddf1e96a151f7ffa0586d420b0bbe.jpg",
+                                "text": "九栖店招",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "这是一家有胆在星巴克楼上包2层，外带顶楼的咖啡馆。就凭这点，就足以证明他们的咖啡是多么的经得起吃货们挑剔的味蕾。从楼道或电梯到二楼，就能见到九栖的店招了，森林风和圆木质镶嵌的风格，是时下文青们的最爱。周二下午天阴阴的，太阳隐隐约约，进门就看到一只喵星人，在店门口慵懒的睡着午觉。店长说，这是他们的招财猫，装修的时候喂过它几次，后来开业后就再也不走了，每天都在店里吃了睡，睡醒了就巡店。于是大家都叫它：小9。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/36cc1b238c930881a70c551243b3915b.jpg",
+                                "text": "可爱的小9",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/44749dfb3c78868f97ca74defd500d70.jpg",
+                                "text": "专业的咖啡制作台",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/6e285daf9f27c98cb38ea50a1ce99e19.jpg",
+                                "text": "满眼的绿色植物",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/3d61ba7e9b0878e97e59d13ef6dc2d34.jpg",
+                                "text": "大大的落地窗",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/6daeb698997f0ec08c50aa25fc26045b.jpg",
+                                "text": "满眼的绿色植物",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "一家店是否能给五星，从各种细节就能体现出来。九栖随便一处不起眼的绿色景致，都是经过花艺师静心搭配的。随便一把椅子或一张桌子，都能说出来头，可能一把不起眼的皮沙发，就能价值五位数以上。满满的诚意，才能经得起挑剔。下午4点左右，一楼基本是满客状态，有的在工作、有的在发呆、有的在聊天，时间仿佛在这里停止不前了。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/9ec376924a83806766225cbcdf19fbfc.jpg",
+                                "text": "打发时间的客人们",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/30577c5c5cc44d1ec82d5862520c1171.jpg",
+                                "text": "一楼的书桌",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/c6ad89e80f36233905c68cd334dd5946.jpg",
+                                "text": "九栖一角",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/385b4dfa4ebb83203f032e9d6dc2f1e0.jpg",
+                                "text": "一楼半天放包间",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/4fa0c80cb197a687fb4e8a5a1110b96e.jpg",
+                                "text": "风格迥异的座位",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "如果你需要比较私密一点的空间，那么花房真的很适合，就在一楼的尽头，安静又神秘。镂空的设计，让阳光从天空洒下来，照在一排又一排的花束上，简直太美了，原谅我没有办法拍出它的美。这里适合自拍、他拍，绝对是拍照的好选择。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/ab1273c92f456e8458b1ba64bdf90ac8.jpg",
+                                "text": "花房就在里面",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/e902fa391e56237990d8d73597a4f090.jpg",
+                                "text": "花房就在里面",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/dcfaf3b84b9d0a6725a9be37fd028bc0.jpg",
+                                "text": "我很爱的花房",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/9941c760bde1117b3845f793415550ec.jpg",
+                                "text": "我很爱的花房",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/dbe6166948826b619c2c34c7be0e079c.jpg",
+                                "text": "我很爱的花房",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/79f7cc555c6f95fd2c26042dca439102.jpg",
+                                "text": "我很爱的花房",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "除了一楼可以选择外，二楼也是非常有个性的。经过旋转楼梯，就能到九栖的二楼。这里相对一楼开放的空间来说，私密了不少，适合2个人的小约会 ，继续往上走，就到了九栖的空中花园。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/7b5bcfcb2fe9a08809fef8cd3bf3b745.jpg",
+                                "text": "二楼楼梯",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/7847459b4782c4edcf64970cfac51465.jpg",
+                                "text": "二楼环境私密不少",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/8994a89e6523deb4374b075b47ca1521.jpg",
+                                "text": "九栖的旋转灯",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/0cb40a1b799fa04f7b3cc1bd86346ddc.jpg",
+                                "text": "和杯子墙",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/c356a2e9ef6bb67dbb4ce19ae1cd3358.jpg",
+                                "text": "空中花园门口",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/24144eca1e32e78fcfe339ff32db6371.jpg",
+                                "text": "空中花园门口",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "空中花园简直别有洞天，近200坪的屋顶，被装饰成了植物的秘密花园。你根本想不到九栖是如何做到的，把这么多的美好植物搬入店中。当然你可以见到当季的植物和鲜花，搭配着各种装饰；当然你也可以见到自拍的妹纸不停的换着各个场景。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/b4bcc691618b0459103f7cd5e32c7165.jpg",
+                                "text": "神秘的空中花园",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/625bd7d9a444dc11681148a94f6eb9a8.jpg",
+                                "text": "传说五位数的植物车",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/701774b5d3eecf73f2c9b4c9051c762d.jpg",
+                                "text": "神秘的空中花园",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/591469604607a6c2df1ee1df746fd6fc.jpg",
+                                "text": "神秘的空中花园",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/d78cd90fa8d794271049aa2b12bdf610.jpg",
+                                "text": "神秘的空中花园",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "明明是喝咖啡的地方，但为何轻食和简餐能做的这么棒。这里有融合了多种料理元素的创意菜，没必要去归类或者评判正宗与否。有四川特色口味的菜品，也有日式的风味，更有韩式料理的选择。总之，你想要吃什么，这里都有。食材的选择上不算高端，但通过厨师的巧手，完全能超乎你的相信。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/a5c8d889a340e260ca5c0401d05e6c45.jpg",
+                                "text": "高品质的餐具",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/233fc1951fe29d6a8fa7a421cbbd788f.jpg",
+                                "text": "自己烘焙的咖啡豆",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/0467210b6d35d9072258c247ada598bf.jpg",
+                                "text": "森林风",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/6d78bb1e835919604ebfa8c445edc900.jpg",
+                                "text": "随处可见的鲜花装饰",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/bc57fc1732d1ec9b2f56f1db2ae9bc15.jpg",
+                                "text": "森林风",
+                                "width": 600,
+                                "height": 600
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "如果要看一家店是否有处女座的属性，那绝对就是厕所了。我也特意去厕所看了一番。直接用照片说话，短短的厕所过道上点满了蜡烛，洗手池旁边满满的绿色装饰，还有各种干花。如果你以为这就完了，那么真的太天真了。进到女厕，才是另一片属于自己的小天地，正面墙的镜子，和可爱的装饰，简直美cry。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/e1161e294593cffd996b306e8aafddc3.jpg",
+                                "text": "惊喜的蜡烛",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/4dfe5866e55dede33c60c8841c6e73ee.jpg",
+                                "text": "女厕里的装饰",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/b00424fbb17fc43309cbd51c18bb0cc0.jpg",
+                                "text": "女厕",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/35f20554ab851c5f34308bcac01fceb8.jpg",
+                                "text": "洗手池上的植物",
+                                "width": 600,
+                                "height": 600
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/5129c1065d4486654c60afa2c61b8358.jpg",
+                                "text": "来自摄影师@二六 的女厕自拍",
+                                "width": 600,
+                                "height": 900
+                            }
+                        ]
+                    },
+                    {
+                        "type": 2,
+                        "object": [
+                            "这么慢，那么美。九栖果然不负所望，把成都的咖啡店逼格又拉升到了一个新的高度，且难以超越。不信，你就去体验一番。"
+                        ]
+                    },
+                    {
+                        "type": 3,
+                        "object": [
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/30194f45ca6cc0463dbea423d297412c.jpg",
+                                "text": "来自摄影师@二六 的实拍",
+                                "width": 600,
+                                "height": 400
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/aa24594aa6e86a835212479b18e65726.jpg",
+                                "text": "来自摄影师@二六 的实拍",
+                                "width": 600,
+                                "height": 400
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/c53731d819076013ba23a1e46a207e64.jpg",
+                                "text": "来自摄影师@二六 的实拍",
+                                "width": 600,
+                                "height": 400
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/5669e598364f502a3d89f2fba255a0b3.jpg",
+                                "text": "来自摄影师@二六 的实拍",
+                                "width": 600,
+                                "height": 400
+                            },
+                            {
+                                "url": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/b598e6a62b1fb6ae863bba9bee6a15f9.jpg",
+                                "text": "来自摄影师@二六 的实拍",
+                                "width": 600,
+                                "height": 400
+                            }
+                        ]
+                    },
+                    {
+                        "type": 5,
+                        "object": {
+                            "id": 354331,
+                            "type": 1,
+                            "poi": "",
+                            "city": "1",
+                            "region": "2",
+                            "name": "九栖(翡翠城店) ",
+                            "alias": "九栖(翡翠城店) ",
+                            "tel": "18728468848",
+                            "address": "华润路华润路102号翡翠天地2楼",
+                            "area_name": "锦江区",
+                            "lon": 104.095716,
+                            "lat": 30.612761,
+                            "pay_average": 150,
+                            "pay_type": 1,
+                            "pay_average2": "￥150/人",
+                            "opentime": "每天09:00-23:30",
+                            "busline": "",
+                            "summary": "九栖，这么慢，那么美。良木缘旗下的高端品牌，成都第二店，在翡翠城。",
+                            "image": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/befd28c37e66c5779664837376e85a72.jpg",
+                            "tags": [
+                                {
+                                    "id": 114,
+                                    "name": "西餐",
+                                    "type": 5
+                                },
+                                {
+                                    "id": 141,
+                                    "name": "有WIFI",
+                                    "type": 4
+                                },
+                                {
+                                    "id": 130,
+                                    "name": "可以刷卡",
+                                    "type": 4
+                                },
+                                {
+                                    "id": 128,
+                                    "name": "有停车位",
+                                    "type": 4
+                                }
+                            ],
+                            "site_id": 903,
+                            "is_foreign": false,
+                            "is_favorite": false
+                        }
+                    }
+                ]
+            ],
+            "rating": "NONE",
+            "rating_good_count": 194,
+            "rating_bad_count": 0,
+            "author_info": {
+                "uid": 1686138441,
+                "screen_name": "巫小刘走丢了",
+                "description": "WeChat：sicilyliu",
+                "profile_image": "http://tva3.sinaimg.cn/crop.0.0.750.750.50/64806e49jw8f09wl55w4ij20ku0kumy3.jpg",
+                "profile_image_large": "http://tva3.sinaimg.cn/crop.0.0.750.750.180/64806e49jw8f09wl55w4ij20ku0kumy3.jpg",
+                "verified_type": 220,
+                "verified_reason": ""
+            },
+            "credit": {
+                "total": 1500,
+                "praise_need": 255
+            },
+            "activity_total": 1,
+            "content_type": "ARTICLE",
+            "id": 40660,
+            "site_id": 903,
+            "title": "这么慢那么美空中咖啡花园",
+            "sub_title": "九栖(翡翠城店) ",
+            "full_image": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/e29a20daca1f76d770b1d08146b70205.jpg",
+            "list_image": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/022899c8621ec21f89a29f029d19bb02.jpg",
+            "thumbnail": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/1/e29a20daca1f76d770b1d08146b70205.jpg",
+            "type": 1,
+            "create_time": "2016-06-20 17:47:02",
+            "publish_date": "2016-06-23",
+            "view_count": 7111,
+            "pois": [
+                {
+                    "id": 354331,
+                    "type": 1,
+                    "poi": "",
+                    "city": "1",
+                    "region": "2",
+                    "name": "九栖(翡翠城店) ",
+                    "alias": "九栖(翡翠城店) ",
+                    "tel": "18728468848",
+                    "address": "华润路华润路102号翡翠天地2楼",
+                    "area_name": "锦江区",
+                    "lon": 104.095716,
+                    "lat": 30.612761,
+                    "pay_average": 150,
+                    "pay_type": 1,
+                    "pay_average2": "￥150/人",
+                    "opentime": "每天09:00-23:30",
+                    "busline": "",
+                    "summary": "九栖，这么慢，那么美。良木缘旗下的高端品牌，成都第二店，在翡翠城。",
+                    "image": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/befd28c37e66c5779664837376e85a72.jpg",
+                    "tags": [
+                        {
+                            "id": 114,
+                            "name": "西餐",
+                            "type": 5
+                        },
+                        {
+                            "id": 141,
+                            "name": "有WIFI",
+                            "type": 4
+                        },
+                        {
+                            "id": 130,
+                            "name": "可以刷卡",
+                            "type": 4
+                        },
+                        {
+                            "id": 128,
+                            "name": "有停车位",
+                            "type": 4
+                        }
+                    ],
+                    "site_id": 903,
+                    "is_foreign": false,
+                    "is_favorite": false
+                }
+            ],
+            "has_video": false,
+            "status": 0,
+            "release_time": "2016-06-22 12:01:20",
+            "intro": "朋友告诉我，翡翠城这边有家店，可以毫无压力的呆上一整天，我还打趣的说她，这是要上天啊。结果去了以后发现，九栖果然名不虚传，这么慢，那么美。",
+            "author_uid": 1686138441,
+            "author_account": {
+                "xcid": 108985,
+                "type": 1,
+                "ident": "1686138441",
+                "nickname": "巫小刘走丢了",
+                "image": "http://img.iot.sina.cn/xiancheng/image/xc-1449147597484-85964--879294258.jpg",
+                "intro": "WeChat：sicilyliu",
+                "is_editor": true,
+                "is_push": true,
+                "is_block": false,
+                "wemedia_type": 4,
+                "site_id": 903,
+                "wemedia_image_large": "http://img.iot.sina.cn/ota/image/xiancheng/badge_bianji_large/file1440988492570.png",
+                "wemedia_image_small": "http://img.iot.sina.cn/ota/image/xiancheng/bianji_small_v2.1/file1441008255907.png",
+                "wemedia_image_small_white": "http://img.iot.sina.cn/ota/image/xiancheng/badge_white_bianji/file1440989963194.png",
+                "credentials": [
+                    {
+                        "xcid": 108985,
+                        "type": 1,
+                        "ident": "1686138441",
+                        "token": "2.00_drGqB5EQLLEe1272fca64Q5YimB"
+                    }
+                ],
+                "fake_id": 1507500
+            },
+            "server_timestamp": 1467345884749,
+            "h5url": "http://chengdu.51xiancheng.com/article/40660",
+            "fav_count": 136,
+            "praise_count": 245,
+            "is_favorite": false,
+            "is_praise": false,
+            "comment_count": 3,
+            "activity": {
+                "id": 7636,
+                "article_id": 40660,
+                "type": 1,
+                "title": "100元代金券",
+                "image": "http://ww3.sinaimg.cn/large/3cz3xQUBjw3f53vizeu8cj30dj09kdil.jpg",
+                "icon_id": 1,
+                "type_image": "http://img.iot.sina.cn/ota/image/xiancheng/activity_type_shichinew/file1427357929090.png",
+                "icon_image": "http://img.iot.sina.cn/ota/image/xiancheng/lottery/file1436860397357.png",
+                "icon_image_gray": "http://img.iot.sina.cn/ota/image/xiancheng/lottery_gray/file1436860376924.png",
+                "start_time": "2016-06-23 00:00:00",
+                "create_time": "2016-06-22 12:09:43",
+                "coupon_expire_date": "2016-07-22",
+                "coupon_verify_code": "0722",
+                "hint": "此券逾期作废，请尽量下载鲜城app，凭卡券兑奖。",
+                "pid": 354331,
+                "otherbrower": 0,
+                "desc": "1.奖品详情：【九栖】100元代金券1张；\r\n2.兑奖方式：请于6月23日-7月22日期间，凭借鲜城app内的中奖卡券，到店核销兑奖；",
+                "extra_list": [
+                    {
+                        "title": "100元代金券",
+                        "total": 10
+                    }
+                ],
+                "allcnt": 10,
+                "expect_cnt": 20,
+                "wincnt": 10,
+                "left": 0,
+                "share": 1,
+                "server_timestamp": 1467345884771,
+                "site_id": 903,
+                "status": 3,
+                "coupon_use_type": 0,
+                "batch": false
+            }
+        },
+        "ads": {
+            "id": -1,
+            "type": 2,
+            "title": "天凉别吼 风风火火吃烤肉",
+            "desc": "记不记得，《水浒传》里的108位好汉，大碗喝酒，大口吃肉，一身豪气行走人间。当烤肉碰上了“梁山好汉”，也变得豪放霸气起来。",
+            "image": "http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/1/95d194131fcc84ea916238fbecfbc889.jpg",
+            "location": 1,
+            "article_id": 1294
+        },
+        "comments": [
+            {
+                "id": 222805,
+                "xcid": 1728451,
+                "floor": 3,
+                "article_id": 40660,
+                "create_time": "2016-06-30 05:38:36",
+                "share": false,
+                "deleted": false,
+                "site_id": 903,
+                "comment": "营养第一",
+                "account": {
+                    "xcid": 1728451,
+                    "type": 2,
+                    "ident": "8A658CF6C8C05C973B87D8A279490506",
+                    "nickname": "凯哥032148",
+                    "image": "http://q.qlogo.cn/qqapp/1103288490/8A658CF6C8C05C973B87D8A279490506/100",
+                    "intro": "",
+                    "is_editor": false,
+                    "is_push": true,
+                    "is_block": false,
+                    "wemedia_type": 0,
+                    "fake_id": 2701046
+                }
+            },
+            {
+                "id": 222070,
+                "xcid": 108985,
+                "floor": 2,
+                "article_id": 40660,
+                "create_time": "2016-06-27 14:03:52",
+                "share": false,
+                "deleted": false,
+                "source": {
+                    "comment_id": 221237,
+                    "xcid": 1724533,
+                    "account": {
+                        "xcid": 0,
+                        "type": 0,
+                        "nickname": "Sumper man",
+                        "image": "http://wx.qlogo.cn/mmopen/1YSDjXedSK1blyHd05Ep0sg6iase3vgHpHZp4qnvSbzYxwvGOCSy4iaicBBQa7LRE32eDdZBqv6mtOBnmT1PTEmOQF9Z8KBLQMz/0",
+                        "intro": "",
+                        "is_editor": false,
+                        "is_push": true,
+                        "is_block": false,
+                        "wemedia_type": 0,
+                        "fake_id": 0
+                    }
+                },
+                "site_id": 903,
+                "comment": "听说周末又爆了",
+                "account": {
+                    "xcid": 108985,
+                    "type": 1,
+                    "ident": "1686138441",
+                    "nickname": "巫小刘走丢了",
+                    "image": "http://img.iot.sina.cn/xiancheng/image/xc-1449147597484-85964--879294258.jpg",
+                    "intro": "WeChat：sicilyliu",
+                    "is_editor": true,
+                    "is_push": true,
+                    "is_block": false,
+                    "wemedia_type": 4,
+                    "wemedia_image_large": "http://img.iot.sina.cn/ota/image/xiancheng/badge_bianji_large/file1440988492570.png",
+                    "wemedia_image_small": "http://img.iot.sina.cn/ota/image/xiancheng/bianji_small_v2.1/file1441008255907.png",
+                    "wemedia_image_small_white": "http://img.iot.sina.cn/ota/image/xiancheng/badge_white_bianji/file1440989963194.png",
+                    "fake_id": 1507500
+                }
+            },
+            {
+                "id": 221237,
+                "xcid": 1724533,
+                "floor": 1,
+                "article_id": 40660,
+                "create_time": "2016-06-23 18:34:36",
+                "share": false,
+                "deleted": false,
+                "site_id": 903,
+                "comment": "感觉火爆的节奏",
+                "account": {
+                    "xcid": 1724533,
+                    "type": 4,
+                    "ident": "oKtdgswYaam5YgU5G5vS9GbqhX9c",
+                    "nickname": "Sumper man",
+                    "image": "http://wx.qlogo.cn/mmopen/1YSDjXedSK1blyHd05Ep0sg6iase3vgHpHZp4qnvSbzYxwvGOCSy4iaicBBQa7LRE32eDdZBqv6mtOBnmT1PTEmOQF9Z8KBLQMz/0",
+                    "intro": "",
+                    "is_editor": false,
+                    "is_push": true,
+                    "is_block": false,
+                    "wemedia_type": 0,
+                    "fake_id": 2699128
+                }
+            }
+        ],
+        "sales": []
+    }

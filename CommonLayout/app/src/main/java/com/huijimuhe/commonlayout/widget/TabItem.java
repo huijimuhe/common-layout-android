@@ -2,17 +2,13 @@ package com.huijimuhe.commonlayout.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.text.Layout;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.huijimuhe.commonlayout.R;
-
-import org.w3c.dom.Text;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
@@ -53,7 +49,7 @@ public class TabItem extends RelativeLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        inflate(context,R.layout.layout_xc_tab_item,this);
+        inflate(context,R.layout.xc_layout_tab_item,this);
         mTvTitle =(TextView) findViewById(R.id.tab_text);
         mIvDvider=(ImageView)findViewById(R.id.tab_line);
 

@@ -21,11 +21,11 @@ import com.huijimuhe.commonlayout.widget.LikeButtonList;
  * This is a part of Homedev
  * enjoy
  */
-public class xcArticleRender extends AbstractRender {
+public class xcSubjectRender extends AbstractRender {
     private ViewHolder mHolder;
     private AbstractRenderAdapter mAdapter;
 
-    public xcArticleRender(ViewGroup parent, AbstractRenderAdapter adapter) {
+    public xcSubjectRender(ViewGroup parent, AbstractRenderAdapter adapter) {
         this.mAdapter = adapter;
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_listitem_article, parent, false);
@@ -62,7 +62,7 @@ public class xcArticleRender extends AbstractRender {
             mLikeList.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                  //  adapter.mOnItemFunctionClickListener.onClick(view,getLayoutPosition());
+                    //  adapter.mOnItemFunctionClickListener.onClick(view,getLayoutPosition());
                 }
             });
             v.setOnClickListener(new View.OnClickListener() {

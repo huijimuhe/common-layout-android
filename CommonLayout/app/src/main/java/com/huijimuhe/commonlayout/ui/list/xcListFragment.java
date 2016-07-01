@@ -7,15 +7,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.xcArticleAdapter;
 import com.huijimuhe.commonlayout.adapter.xcSaleAdapter;
-import com.huijimuhe.commonlayout.adapter.xcSubjectAdapter;
 import com.huijimuhe.commonlayout.adapter.xcWeekAdapter;
 import com.huijimuhe.commonlayout.data.xc.source.xcRepository;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
@@ -23,7 +22,8 @@ import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 import com.huijimuhe.commonlayout.data.xc.xcSale;
 import com.huijimuhe.commonlayout.presenter.xc.xcContract;
 import com.huijimuhe.commonlayout.presenter.xc.xcPresenter;
-import com.huijimuhe.commonlayout.ui.base.abLceListFragment;
+import com.huijimuhe.commonlayout.ui.base.xcAbLceListFragment;
+import com.huijimuhe.commonlayout.ui.detail.xcDetailActivity;
 import com.huijimuhe.commonlayout.widget.BannerView;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 import com.huijimuhe.commonlayout.widget.SwitchTabView;
@@ -45,11 +45,10 @@ import java.util.ArrayList;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class XCListFragment extends abLceListFragment implements xcContract.View {
+public class XCListFragment extends xcAbLceListFragment implements xcContract.View {
 
     private xcPresenter mPresenter;
-    private HeaderViewHolder mHeaderView;
-    private xcSubjectAdapter mSubjectAdapter;
+    private HeaderViewWrapper mHeaderView;
 
     public static XCListFragment newInstance() {
         XCListFragment fragment = new XCListFragment();
@@ -64,6 +63,19 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
 
         mPresenter = new xcPresenter(this, new xcRepository());
         mPresenter.start();
+
+        mTabView.setOnTabSelectedListener(new SwitchTabView.TabSelectedListener() {
+            @Override
+            public void onIndexChange(int original, int current) {
+                mPresenter.switchAdapter(current);
+                mHeaderView.tabView.setSelected(current);
+            }
+
+            @Override
+            public void onItemChange(View item, int index) {
+
+            }
+        });
 
         loadData();
     }
@@ -80,11 +92,11 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
 
     @Override
     public void addHeaderView(View root) {
-        View v = LayoutInflater.from(getActivity()).inflate(R.layout.listheader_xc, mRecyclerView, false);
-        mHeaderView = new HeaderViewHolder(v, getActivity());
-        mHeaderView.setOnHeaderViewHolderClickListener(new HeaderViewHolderClickListener() {
+        mHeaderView = new HeaderViewWrapper(getActivity());
+        mHeaderView.setOnHeaderViewWrapperClickListener(new HeaderViewWrapperClickListener() {
             @Override
             public void onTabChange(int index) {
+                mTabView.setSelected(index);
                 mPresenter.switchAdapter(index);
             }
 
@@ -95,15 +107,15 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
 
             @Override
             public void onArticleClick(View view) {
-
+                getActivity().startActivity(xcDetailActivity.newIntent());
             }
         });
-        mAdapter.setHeaderView(v);
+        mAdapter.setHeaderView(mHeaderView.getRoot());
     }
 
     @Override
     public void onItemNormalClick(View view, int postion) {
-
+        getActivity().startActivity(xcDetailActivity.newIntent());
     }
 
     @Override
@@ -142,34 +154,31 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
 
     }
 
-    public class HeaderViewHolder {
+    private class HeaderViewWrapper {
         private BannerView banner;
         private NoScrollRecyclerView saleList;
         private RecyclerView weekList;
         private SwitchTabView tabView;
         private xcSaleAdapter saleAdapter;
         private xcWeekAdapter weekAdapter;
-        private HeaderViewHolderClickListener l;
+        private HeaderViewWrapperClickListener l;
+        private LinearLayout root;
 
-        public HeaderViewHolder(View view, Context context) {
-            initUI(view, context);
+        public HeaderViewWrapper(Context context) {
+            root = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.xc_listheader_list, mRecyclerView, false);
+            initUI(root, context);
         }
 
-        public void setOnHeaderViewHolderClickListener(HeaderViewHolderClickListener l) {
+        public void setOnHeaderViewWrapperClickListener(HeaderViewWrapperClickListener l) {
             this.l = l;
         }
 
+        public View getRoot() {
+            return root;
+        }
+
         public void initUI(View view, Context context) {
-            view.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View view, MotionEvent motionEvent) {
-                    if (motionEvent.getAction() == MotionEvent.ACTION_UP)
-                        mSwipeRefreshLayout.requestDisallowInterceptTouchEvent(true);
-                    else
-                        mSwipeRefreshLayout.requestDisallowInterceptTouchEvent(false);
-                    return false;
-                }
-            });
+
             /**Banner*/
             banner = (BannerView) view.findViewById(R.id.advertise_banner);
             banner.setOnBannerClickListener(new BannerView.BannerClickListener() {
@@ -208,6 +217,7 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
                 }
             });
             weekList.setAdapter(weekAdapter);
+
             /**tab items*/
             tabView = (SwitchTabView) view.findViewById(R.id.handpick_tab);
             tabView.setOnTabSelectedListener(new SwitchTabView.TabSelectedListener() {
@@ -234,7 +244,7 @@ public class XCListFragment extends abLceListFragment implements xcContract.View
         }
     }
 
-    public interface HeaderViewHolderClickListener {
+    public interface HeaderViewWrapperClickListener {
         void onTabChange(int index);
 
         void onSaleClick(View view);

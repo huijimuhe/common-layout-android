@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide;
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
-import com.huijimuhe.commonlayout.data.xc.xcSale;
 
 import java.util.List;
 
@@ -44,7 +43,7 @@ public class xcWeekAdapter extends AbstractAdapter<xcWeekAdapter.ViewHolder> {
     public xcWeekAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                        int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.listitem_xc_week, parent, false);
+                .inflate(R.layout.xc_listitem_week, parent, false);
         return new ViewHolder(v);
     }
 

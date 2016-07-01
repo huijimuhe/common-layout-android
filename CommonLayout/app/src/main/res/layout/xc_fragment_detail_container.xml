@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/article_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0dip"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0.0dip"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/article_menu_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/xc_bottom_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="1.0px">
+
+        <com.huijimuhe.commonlayout.widget.DrawableCenterTextView
+            android:id="@+id/article_collect"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/xc_selector_list_item"
+            android:drawableLeft="@android:drawable/ic_btn_speak_now"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:textColor="@android:color/black"
+            android:textSize="17.0sp" />
+
+        <View
+            android:layout_width="0.70000005dip"
+            android:layout_height="34.0dip"
+            android:background="#ffd7d7d7" />
+
+        <com.huijimuhe.commonlayout.widget.DrawableCenterTextView
+            android:id="@+id/article_share"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/xc_selector_list_item"
+            android:drawableLeft="@android:drawable/ic_btn_speak_now"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="分享"
+            android:textColor="@android:color/black"
+            android:textSize="17.0sp" />
+
+        <View
+            android:layout_width="0.70000005dip"
+            android:layout_height="34.0dip"
+            android:background="#ffd7d7d7" />
+
+        <com.huijimuhe.commonlayout.widget.DrawableCenterTextView
+            android:id="@+id/article_comment"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/xc_selector_list_item"
+            android:drawableLeft="@android:drawable/ic_btn_speak_now"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="评论"
+            android:textColor="@android:color/black"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/article_edit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black_alpha_40"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/article_edit_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

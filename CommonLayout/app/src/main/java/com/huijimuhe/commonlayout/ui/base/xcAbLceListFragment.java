@@ -7,18 +7,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
+import com.huijimuhe.commonlayout.widget.SwitchTabView;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
- * <p/>
+ * <p>
  * Contact: 20903213@qq.com Zengweizhou
- * <p/>
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -29,7 +31,7 @@ import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public abstract class abLceListFragment extends Fragment {
+public abstract class xcAbLceListFragment extends Fragment {
 
     private View mContentView;
     private View mErrorView;
@@ -37,17 +39,24 @@ public abstract class abLceListFragment extends Fragment {
     protected SwipeRefreshLayout mSwipeRefreshLayout;
     protected RecyclerView mRecyclerView;
     protected AbstractRenderAdapter mAdapter;
+    protected LinearLayoutManager mLayoutManager;
+    protected SwitchTabView mTabView;
+
+    private boolean isTop = true;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.fragment_list, null);
+        View v = inflater.inflate(R.layout.xc_fragment_list, null);
 
         //Lce
         mContentView = v.findViewById(R.id.contentview);
         mErrorView = v.findViewById(R.id.emptyview);
         mLoadingView = v.findViewById(R.id.loadingview);
+
+        //Tab Switch View
+        mTabView = (SwitchTabView) v.findViewById(R.id.top_tab_switch);
 
         //swipe refresh layout
         mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_container);
@@ -62,9 +71,31 @@ public abstract class abLceListFragment extends Fragment {
 
         //recycler view
         mRecyclerView = (RecyclerView) v.findViewById(R.id.listview);
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                int position = mLayoutManager.findFirstVisibleItemPosition();
+                if (position == 0 ) {
+                    if(!isTop){
+                        isTop = true;
+                        mTabView.setVisibility(View.GONE);
+                    }
+                } else {
+                    isTop = false;
+                    mTabView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         //set adapter
         mAdapter = getRecyclerAdapter();

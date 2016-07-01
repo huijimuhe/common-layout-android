@@ -11,31 +11,37 @@ public class xcArticle {
 
     /**
      * content_type : ARTICLE
-     * id : 38196
+     * id : 40754
      * site_id : 903
-     * title : 在绿茵场上醉生梦死一场
-     * sub_title : 星期六的地图
-     * full_image : http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/c7a4af137a1b4a7af5dfa834efe2e042.jpg
-     * list_image : http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/ccefd3271980babe41a860fcd1c8a433.jpg
-     * thumbnail : http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/1/c7a4af137a1b4a7af5dfa834efe2e042.jpg
-     * type : 6
-     * create_time : 2016-05-11 15:33:09
-     * publish_date : 2016-06-18
-     * view_count : 5008
-     * pois : [{"id":352299,"type":6,"poi":"","city":"1","region":"5","name":"星期六的地图","alias":"","tel":"18602831655;028-83262283","address":"府青路二段2号财富又一城B1楼下沉广场(面包新语旁)","area_name":"成华区","lon":104.09432,"lat":30.67775,"pay_average":50,"pay_type":1,"pay_average2":"￥50/人","opentime":"每天18:00-01:00","busline":"","summary":"","image":"http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/84d0f559a15cc6e01cd089d4ee12517f.jpg","tags":[{"id":26,"name":"建设路","type":3},{"id":1142,"name":"酒吧","type":5},{"id":148,"name":"有无烟区","type":4},{"id":151,"name":"有表演","type":4},{"id":1196,"name":"接受预定","type":4},{"id":141,"name":"有WIFI","type":4},{"id":130,"name":"可以刷卡","type":4},{"id":128,"name":"有停车位","type":4}],"site_id":903,"is_foreign":false,"is_favorite":false}]
+     * title : 电音风暴 重磅DJ加盟
+     * sub_title : 非遗博览园
+     * full_image :
+     * list_image :
+     * thumbnail :
+     * type : 5
+     * create_time : 2016-06-21 20:42:49
+     * publish_date : 2016-06-23
+     * start_date : 2016-07-01
+     * end_date : 2016-07-02
+     * start_time : 15:00:00
+     * end_time : 23:55:00
+     * view_count : 2060
+     * pois : [{"id":354392,"type":5,"poi":"非遗博览园","city":"1","region":"4","name":"非遗博览园","alias":"非遗博览园","tel":"","address":"四川省成都市青羊区光华大道2段601号","area_name":"青羊区","lon":103.922478,"lat":30.674086,"pay_average":0,"pay_type":4,"pay_average2":"暂无","opentime":"每天","busline":"","summary":"非遗博览园","image":"","tags":[{"id":128,"name":"有停车位","type":4}],"site_id":903,"is_foreign":false,"is_favorite":false}]
      * has_video : false
      * status : 0
-     * release_time : 2016-06-17 22:44:12
-     * intro : 绿茵场上的酣畅淋漓，必须要小麦香气的精酿啤酒来相伴。在超大LED屏幕的影射下，每一次精彩的射门都让你仿佛身临赛场。干杯欢呼吧，为了UEFA！星期六的地图不仅为你准备了看球的LED大屏，豪迈的啤酒和可口的鸡尾酒，还有超多重欧洲杯主题优惠活动。
-     * author_uid : 5293055556
-     * author_account : {"xcid":104581,"type":1,"ident":"5293055556","nickname":"LIN三千","image":"http://tp1.sinaimg.cn/5293055556/180/40065986055/0","intro":"模糊地迷戀你一场","is_editor":true,"is_push":true,"is_block":false,"wemedia_type":4,"site_id":0,"wemedia_image_large":"http://img.iot.sina.cn/ota/image/xiancheng/badge_bianji_large/file1440988492570.png","wemedia_image_small":"http://img.iot.sina.cn/ota/image/xiancheng/bianji_small_v2.1/file1441008255907.png","wemedia_image_small_white":"http://img.iot.sina.cn/ota/image/xiancheng/badge_white_bianji/file1440989963194.png","credentials":[{"xcid":104581,"type":1,"ident":"5293055556"}],"fake_id":1537928}
-     * server_timestamp : 1466610806498
-     * h5url : http://chengdu.51xiancheng.com/article/38196
-     * fav_count : 82
-     * praise_count : 319
+     * release_time : 2016-06-22 11:48:54
+     * intro :
+     * author_uid : 1907323224
+     * author_account : {"xcid":1078155,"type":1,"ident":"1907323224","nickname":"五花肉好吃","image":"","intro":"","is_editor":false,"is_push":true,"is_block":false,"wemedia_type":2,"site_id":903,"wemedia_image_large":"","wemedia_image_small":"","wemedia_image_small_white":"","credentials":[{"xcid":1078155,"type":1,"ident":"1907323224","token":"2.00otvEFC5EQLLE5e00477b80jvXrXC"}],"fake_id":2607806}
+     * server_timestamp : 1466916418958
+     * formative_time :
+     * h5url :
+     * fav_count : 10
+     * praise_count : 144
      * is_favorite : false
      * is_praise : false
-     * comment_count : 0
+     * comment_count : 1
+     * activity : {"id":7639,"article_id":40754,"type":1,"title":"音乐节双人门票","image":"","icon_id":1,"type_image":"","icon_image":"","icon_image_gray":"","start_time":"2016-06-23 00:00:00","create_time":"2016-06-22 12:22:26","coupon_expire_date":"2016-07-22","hint":"","pid":354392,"otherbrower":0,"desc":"","extra_list":[{"title":"音乐节双人门票","total":3}],"allcnt":3,"expect_cnt":500,"wincnt":3,"left":0,"share":1,"server_timestamp":1466916419025,"site_id":903,"status":3,"coupon_use_type":0,"batch":false}
      */
 
     private String content_type;
@@ -49,20 +55,26 @@ public class xcArticle {
     private int type;
     private String create_time;
     private String publish_date;
+    private String start_date;
+    private String end_date;
+    private String start_time;
+    private String end_time;
     private int view_count;
     private boolean has_video;
     private int status;
     private String release_time;
     private String intro;
-    private long author_uid;
+    private String author_uid;
     private AuthorAccountEntity author_account;
     private long server_timestamp;
+    private String formative_time;
     private String h5url;
     private int fav_count;
     private int praise_count;
     private boolean is_favorite;
     private boolean is_praise;
     private int comment_count;
+    private ActivityEntity activity;
     private List<PoisEntity> pois;
 
     public void setContent_type(String content_type) {
@@ -109,6 +121,22 @@ public class xcArticle {
         this.publish_date = publish_date;
     }
 
+    public void setStart_date(String start_date) {
+        this.start_date = start_date;
+    }
+
+    public void setEnd_date(String end_date) {
+        this.end_date = end_date;
+    }
+
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
+    }
+
     public void setView_count(int view_count) {
         this.view_count = view_count;
     }
@@ -129,7 +157,7 @@ public class xcArticle {
         this.intro = intro;
     }
 
-    public void setAuthor_uid(long author_uid) {
+    public void setAuthor_uid(String author_uid) {
         this.author_uid = author_uid;
     }
 
@@ -139,6 +167,10 @@ public class xcArticle {
 
     public void setServer_timestamp(long server_timestamp) {
         this.server_timestamp = server_timestamp;
+    }
+
+    public void setFormative_time(String formative_time) {
+        this.formative_time = formative_time;
     }
 
     public void setH5url(String h5url) {
@@ -163,6 +195,10 @@ public class xcArticle {
 
     public void setComment_count(int comment_count) {
         this.comment_count = comment_count;
+    }
+
+    public void setActivity(ActivityEntity activity) {
+        this.activity = activity;
     }
 
     public void setPois(List<PoisEntity> pois) {
@@ -213,6 +249,22 @@ public class xcArticle {
         return publish_date;
     }
 
+    public String getStart_date() {
+        return start_date;
+    }
+
+    public String getEnd_date() {
+        return end_date;
+    }
+
+    public String getStart_time() {
+        return start_time;
+    }
+
+    public String getEnd_time() {
+        return end_time;
+    }
+
     public int getView_count() {
         return view_count;
     }
@@ -233,7 +285,7 @@ public class xcArticle {
         return intro;
     }
 
-    public long getAuthor_uid() {
+    public String getAuthor_uid() {
         return author_uid;
     }
 
@@ -243,6 +295,10 @@ public class xcArticle {
 
     public long getServer_timestamp() {
         return server_timestamp;
+    }
+
+    public String getFormative_time() {
+        return formative_time;
     }
 
     public String getH5url() {
@@ -269,28 +325,32 @@ public class xcArticle {
         return comment_count;
     }
 
+    public ActivityEntity getActivity() {
+        return activity;
+    }
+
     public List<PoisEntity> getPois() {
         return pois;
     }
 
     public static class AuthorAccountEntity {
         /**
-         * xcid : 104581
+         * xcid : 1078155
          * type : 1
-         * ident : 5293055556
-         * nickname : LIN三千
-         * image : http://tp1.sinaimg.cn/5293055556/180/40065986055/0
-         * intro : 模糊地迷戀你一场
-         * is_editor : true
+         * ident : 1907323224
+         * nickname : 五花肉好吃
+         * image :
+         * intro :
+         * is_editor : false
          * is_push : true
          * is_block : false
-         * wemedia_type : 4
-         * site_id : 0
-         * wemedia_image_large : http://img.iot.sina.cn/ota/image/xiancheng/badge_bianji_large/file1440988492570.png
-         * wemedia_image_small : http://img.iot.sina.cn/ota/image/xiancheng/bianji_small_v2.1/file1441008255907.png
-         * wemedia_image_small_white : http://img.iot.sina.cn/ota/image/xiancheng/badge_white_bianji/file1440989963194.png
-         * credentials : [{"xcid":104581,"type":1,"ident":"5293055556"}]
-         * fake_id : 1537928
+         * wemedia_type : 2
+         * site_id : 903
+         * wemedia_image_large :
+         * wemedia_image_small :
+         * wemedia_image_small_white :
+         * credentials : [{"xcid":1078155,"type":1,"ident":"1907323224","token":"2.00otvEFC5EQLLE5e00477b80jvXrXC"}]
+         * fake_id : 2607806
          */
 
         private int xcid;
@@ -440,14 +500,16 @@ public class xcArticle {
 
         public static class CredentialsEntity {
             /**
-             * xcid : 104581
+             * xcid : 1078155
              * type : 1
-             * ident : 5293055556
+             * ident : 1907323224
+             * token : 2.00otvEFC5EQLLE5e00477b80jvXrXC
              */
 
             private int xcid;
             private int type;
             private String ident;
+            private String token;
 
             public void setXcid(int xcid) {
                 this.xcid = xcid;
@@ -461,6 +523,10 @@ public class xcArticle {
                 this.ident = ident;
             }
 
+            public void setToken(String token) {
+                this.token = token;
+            }
+
             public int getXcid() {
                 return xcid;
             }
@@ -472,31 +538,337 @@ public class xcArticle {
             public String getIdent() {
                 return ident;
             }
+
+            public String getToken() {
+                return token;
+            }
+        }
+    }
+
+    public static class ActivityEntity {
+        /**
+         * id : 7639
+         * article_id : 40754
+         * type : 1
+         * title : 音乐节双人门票
+         * image :
+         * icon_id : 1
+         * type_image :
+         * icon_image :
+         * icon_image_gray :
+         * start_time : 2016-06-23 00:00:00
+         * create_time : 2016-06-22 12:22:26
+         * coupon_expire_date : 2016-07-22
+         * hint :
+         * pid : 354392
+         * otherbrower : 0
+         * desc :
+         * extra_list : [{"title":"音乐节双人门票","total":3}]
+         * allcnt : 3
+         * expect_cnt : 500
+         * wincnt : 3
+         * left : 0
+         * share : 1
+         * server_timestamp : 1466916419025
+         * site_id : 903
+         * status : 3
+         * coupon_use_type : 0
+         * batch : false
+         */
+
+        private int id;
+        private int article_id;
+        private int type;
+        private String title;
+        private String image;
+        private int icon_id;
+        private String type_image;
+        private String icon_image;
+        private String icon_image_gray;
+        private String start_time;
+        private String create_time;
+        private String coupon_expire_date;
+        private String hint;
+        private int pid;
+        private int otherbrower;
+        private String desc;
+        private int allcnt;
+        private int expect_cnt;
+        private int wincnt;
+        private int left;
+        private int share;
+        private long server_timestamp;
+        private int site_id;
+        private int status;
+        private int coupon_use_type;
+        private boolean batch;
+        private List<ExtraListEntity> extra_list;
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public void setArticle_id(int article_id) {
+            this.article_id = article_id;
+        }
+
+        public void setType(int type) {
+            this.type = type;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+        public void setIcon_id(int icon_id) {
+            this.icon_id = icon_id;
+        }
+
+        public void setType_image(String type_image) {
+            this.type_image = type_image;
+        }
+
+        public void setIcon_image(String icon_image) {
+            this.icon_image = icon_image;
+        }
+
+        public void setIcon_image_gray(String icon_image_gray) {
+            this.icon_image_gray = icon_image_gray;
+        }
+
+        public void setStart_time(String start_time) {
+            this.start_time = start_time;
+        }
+
+        public void setCreate_time(String create_time) {
+            this.create_time = create_time;
+        }
+
+        public void setCoupon_expire_date(String coupon_expire_date) {
+            this.coupon_expire_date = coupon_expire_date;
+        }
+
+        public void setHint(String hint) {
+            this.hint = hint;
+        }
+
+        public void setPid(int pid) {
+            this.pid = pid;
+        }
+
+        public void setOtherbrower(int otherbrower) {
+            this.otherbrower = otherbrower;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+
+        public void setAllcnt(int allcnt) {
+            this.allcnt = allcnt;
+        }
+
+        public void setExpect_cnt(int expect_cnt) {
+            this.expect_cnt = expect_cnt;
+        }
+
+        public void setWincnt(int wincnt) {
+            this.wincnt = wincnt;
+        }
+
+        public void setLeft(int left) {
+            this.left = left;
+        }
+
+        public void setShare(int share) {
+            this.share = share;
+        }
+
+        public void setServer_timestamp(long server_timestamp) {
+            this.server_timestamp = server_timestamp;
+        }
+
+        public void setSite_id(int site_id) {
+            this.site_id = site_id;
+        }
+
+        public void setStatus(int status) {
+            this.status = status;
+        }
+
+        public void setCoupon_use_type(int coupon_use_type) {
+            this.coupon_use_type = coupon_use_type;
+        }
+
+        public void setBatch(boolean batch) {
+            this.batch = batch;
+        }
+
+        public void setExtra_list(List<ExtraListEntity> extra_list) {
+            this.extra_list = extra_list;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public int getArticle_id() {
+            return article_id;
+        }
+
+        public int getType() {
+            return type;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public int getIcon_id() {
+            return icon_id;
+        }
+
+        public String getType_image() {
+            return type_image;
+        }
+
+        public String getIcon_image() {
+            return icon_image;
+        }
+
+        public String getIcon_image_gray() {
+            return icon_image_gray;
+        }
+
+        public String getStart_time() {
+            return start_time;
+        }
+
+        public String getCreate_time() {
+            return create_time;
+        }
+
+        public String getCoupon_expire_date() {
+            return coupon_expire_date;
+        }
+
+        public String getHint() {
+            return hint;
+        }
+
+        public int getPid() {
+            return pid;
+        }
+
+        public int getOtherbrower() {
+            return otherbrower;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public int getAllcnt() {
+            return allcnt;
+        }
+
+        public int getExpect_cnt() {
+            return expect_cnt;
+        }
+
+        public int getWincnt() {
+            return wincnt;
+        }
+
+        public int getLeft() {
+            return left;
+        }
+
+        public int getShare() {
+            return share;
+        }
+
+        public long getServer_timestamp() {
+            return server_timestamp;
+        }
+
+        public int getSite_id() {
+            return site_id;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+
+        public int getCoupon_use_type() {
+            return coupon_use_type;
+        }
+
+        public boolean getBatch() {
+            return batch;
+        }
+
+        public List<ExtraListEntity> getExtra_list() {
+            return extra_list;
+        }
+
+        public static class ExtraListEntity {
+            /**
+             * title : 音乐节双人门票
+             * total : 3
+             */
+
+            private String title;
+            private int total;
+
+            public void setTitle(String title) {
+                this.title = title;
+            }
+
+            public void setTotal(int total) {
+                this.total = total;
+            }
+
+            public String getTitle() {
+                return title;
+            }
+
+            public int getTotal() {
+                return total;
+            }
         }
     }
 
     public static class PoisEntity {
         /**
-         * id : 352299
-         * type : 6
-         * poi :
+         * id : 354392
+         * type : 5
+         * poi : 非遗博览园
          * city : 1
-         * region : 5
-         * name : 星期六的地图
-         * alias :
-         * tel : 18602831655;028-83262283
-         * address : 府青路二段2号财富又一城B1楼下沉广场(面包新语旁)
-         * area_name : 成华区
-         * lon : 104.09432
-         * lat : 30.67775
-         * pay_average : 50
-         * pay_type : 1
-         * pay_average2 : ￥50/人
-         * opentime : 每天18:00-01:00
+         * region : 4
+         * name : 非遗博览园
+         * alias : 非遗博览园
+         * tel :
+         * address : 四川省成都市青羊区光华大道2段601号
+         * area_name : 青羊区
+         * lon : 103.922478
+         * lat : 30.674086
+         * pay_average : 0
+         * pay_type : 4
+         * pay_average2 : 暂无
+         * opentime : 每天
          * busline :
-         * summary :
-         * image : http://s3img.city.sina.com.cn/xiancheng/common/thumbnail/0/84d0f559a15cc6e01cd089d4ee12517f.jpg
-         * tags : [{"id":26,"name":"建设路","type":3},{"id":1142,"name":"酒吧","type":5},{"id":148,"name":"有无烟区","type":4},{"id":151,"name":"有表演","type":4},{"id":1196,"name":"接受预定","type":4},{"id":141,"name":"有WIFI","type":4},{"id":130,"name":"可以刷卡","type":4},{"id":128,"name":"有停车位","type":4}]
+         * summary : 非遗博览园
+         * image :
+         * tags : [{"id":128,"name":"有停车位","type":4}]
          * site_id : 903
          * is_foreign : false
          * is_favorite : false
@@ -712,9 +1084,9 @@ public class xcArticle {
 
         public static class TagsEntity {
             /**
-             * id : 26
-             * name : 建设路
-             * type : 3
+             * id : 128
+             * name : 有停车位
+             * type : 4
              */
 
             private int id;

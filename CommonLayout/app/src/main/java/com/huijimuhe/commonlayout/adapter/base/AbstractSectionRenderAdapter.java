@@ -1,4 +1,4 @@
-package com.huijimuhe.commonlayout.adapter.render;
+package com.huijimuhe.commonlayout.adapter.base;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
@@ -15,5 +15,6 @@ package com.huijimuhe.commonlayout.adapter.render;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcSubjectsRender {
+public abstract class AbstractSectionRenderAdapter<T> extends AbstractRenderAdapter<T> {
+
 }

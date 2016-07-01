@@ -8,7 +8,6 @@ import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
 import com.huijimuhe.commonlayout.adapter.render.xcArticleRender;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 
 import java.util.List;
 

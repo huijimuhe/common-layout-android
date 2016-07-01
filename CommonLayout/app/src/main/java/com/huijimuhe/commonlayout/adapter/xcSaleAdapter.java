@@ -43,7 +43,7 @@ public class xcSaleAdapter extends AbstractAdapter<xcSaleAdapter.ViewHolder> {
     public xcSaleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                          int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.listitem_xc_sale, parent, false);
+                .inflate(R.layout.xc_listitem_sale, parent, false);
         return new ViewHolder(v);
     }
 
