@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/card_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xc_selector_list_item"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/xc_article_padding">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/xc_article_padding"
+            android:background="@color/tab_unselected_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/xc_article_padding"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:paddingTop="@dimen/xc_article_padding"
+            android:text="推荐-Recommend" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:scaleType="fitXY"
+            android:src="@color/divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_advertise_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xc_selector_list_item"
+        android:paddingBottom="15.0dip"
+        android:paddingLeft="@dimen/xc_article_padding"
+        android:paddingRight="@dimen/xc_article_padding"
+        android:paddingTop="15.0dip">
+
+        <ImageView
+            android:id="@+id/card_advertise_icon"
+            android:layout_width="119.0dip"
+            android:layout_height="90.0dip"
+            android:layout_marginRight="15.0dip"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@color/black_alpha_20" />
+
+        <TextView
+            android:id="@+id/card_advertise_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/card_advertise_icon"
+            android:singleLine="true"
+            android:text="推荐内容标题"
+            android:textColor="@android:color/black"
+            android:textSize="17.0sp" />
+
+        <TextView
+            android:id="@+id/card_advertise_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_advertise_title"
+            android:layout_toRightOf="@id/card_advertise_icon"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3.0dip"
+            android:maxLines="3"
+            android:text="推荐内容简介描述"
+            android:textColor="#ff7f7f7f"
+            android:textSize="13.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginRight="@dimen/xc_article_padding"
+        android:background="@color/divider" />
+</LinearLayout>

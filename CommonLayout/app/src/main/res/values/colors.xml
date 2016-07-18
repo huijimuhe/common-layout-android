@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--鲜城-->
+    <color name="black_alpha_40">#40000000</color>
+    <color name="black_alpha_5">#05000000</color>
+    <color name="black_alpha_20">#20000000</color>
+    <color name="black_alpha_70">#70000000</color>
+    <color name="divider">#4c4c4c</color>
+    <color name="tab_selected_color">#242424</color>
+    <color name="tab_unselected_color">#8e8e8e</color>
+    <color name="selector_tab_text_color">#8e8e8e</color>
+
+    <!--ENJOY-->
+    <color name="common_clicked_color">#4b4b4b</color>
+    <color name="enjoy_color_1">#282828</color>
+</resources>

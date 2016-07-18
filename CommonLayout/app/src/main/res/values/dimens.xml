@@ -1,0 +1,13 @@
+<resources>
+    <!-- 鲜城 -->
+    <dimen name="xc_article_list_divider">8.0dip</dimen>
+    <dimen name="xc_article_padding">11.0dip</dimen>
+    <dimen name="xc_article_subtitle_paddingRight">17.0dip</dimen>
+    <dimen name="xc_article_list_item_time">160.0dip</dimen>
+    <dimen name="xc_article_image_height">280dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="xc_toolbar_height">48.0dip</dimen>
+</resources>

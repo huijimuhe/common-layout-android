@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_title_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="25.0dip"
+    android:paddingLeft="@dimen/xc_article_padding"
+    android:paddingRight="@dimen/xc_article_padding"
+    android:paddingTop="25.0dip">
+
+    <TextView
+        android:id="@+id/card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4.0dip"
+        android:drawableRight="@drawable/xc_articlescreen_shop_ic_enter"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="店铺名称"
+        android:textColor="#ff000000"
+        android:textSize="22.0sp" />
+
+    <TextView
+        android:id="@+id/card_title_time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dip"
+        android:drawableLeft="@drawable/xc_articlescreen_shop_ic_time"
+        android:drawablePadding="6.0dip"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="13.0sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/card_title_poi_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dip"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/card_title_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/xc_articlescreen_shop_ic_shangquan"
+            android:drawablePadding="6.0dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:text="地区"
+            android:textSize="12.0sp" />
+
+        <View
+            android:id="@+id/card_title_divider1"
+            android:layout_width="1.0dip"
+            android:layout_height="12.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffd0d0d0" />
+
+        <TextView
+            android:id="@+id/card_title_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/xc_articlescreen_shop_ic_caixi"
+            android:drawablePadding="6.0dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:text="类型"
+            android:textSize="12.0sp" />
+
+        <View
+            android:id="@+id/card_title_divider2"
+            android:layout_width="1.0dip"
+            android:layout_height="12.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffd0d0d0" />
+
+        <TextView
+            android:id="@+id/card_title_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/xc_articlescreen_shop_ic_renjun"
+            android:drawablePadding="6.0dip"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:text="价格"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+</LinearLayout>

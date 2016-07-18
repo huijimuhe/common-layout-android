@@ -65,7 +65,7 @@ public class xcArticle {
     private String release_time;
     private String intro;
     private String author_uid;
-    private AuthorAccountEntity author_account;
+    private xcAccount author_account;
     private long server_timestamp;
     private String formative_time;
     private String h5url;
@@ -161,7 +161,7 @@ public class xcArticle {
         this.author_uid = author_uid;
     }
 
-    public void setAuthor_account(AuthorAccountEntity author_account) {
+    public void setAuthor_account(xcAccount author_account) {
         this.author_account = author_account;
     }
 
@@ -289,7 +289,7 @@ public class xcArticle {
         return author_uid;
     }
 
-    public AuthorAccountEntity getAuthor_account() {
+    public xcAccount getAuthor_account() {
         return author_account;
     }
 
@@ -331,218 +331,6 @@ public class xcArticle {
 
     public List<PoisEntity> getPois() {
         return pois;
-    }
-
-    public static class AuthorAccountEntity {
-        /**
-         * xcid : 1078155
-         * type : 1
-         * ident : 1907323224
-         * nickname : 五花肉好吃
-         * image :
-         * intro :
-         * is_editor : false
-         * is_push : true
-         * is_block : false
-         * wemedia_type : 2
-         * site_id : 903
-         * wemedia_image_large :
-         * wemedia_image_small :
-         * wemedia_image_small_white :
-         * credentials : [{"xcid":1078155,"type":1,"ident":"1907323224","token":"2.00otvEFC5EQLLE5e00477b80jvXrXC"}]
-         * fake_id : 2607806
-         */
-
-        private int xcid;
-        private int type;
-        private String ident;
-        private String nickname;
-        private String image;
-        private String intro;
-        private boolean is_editor;
-        private boolean is_push;
-        private boolean is_block;
-        private int wemedia_type;
-        private int site_id;
-        private String wemedia_image_large;
-        private String wemedia_image_small;
-        private String wemedia_image_small_white;
-        private int fake_id;
-        private List<CredentialsEntity> credentials;
-
-        public void setXcid(int xcid) {
-            this.xcid = xcid;
-        }
-
-        public void setType(int type) {
-            this.type = type;
-        }
-
-        public void setIdent(String ident) {
-            this.ident = ident;
-        }
-
-        public void setNickname(String nickname) {
-            this.nickname = nickname;
-        }
-
-        public void setImage(String image) {
-            this.image = image;
-        }
-
-        public void setIntro(String intro) {
-            this.intro = intro;
-        }
-
-        public void setIs_editor(boolean is_editor) {
-            this.is_editor = is_editor;
-        }
-
-        public void setIs_push(boolean is_push) {
-            this.is_push = is_push;
-        }
-
-        public void setIs_block(boolean is_block) {
-            this.is_block = is_block;
-        }
-
-        public void setWemedia_type(int wemedia_type) {
-            this.wemedia_type = wemedia_type;
-        }
-
-        public void setSite_id(int site_id) {
-            this.site_id = site_id;
-        }
-
-        public void setWemedia_image_large(String wemedia_image_large) {
-            this.wemedia_image_large = wemedia_image_large;
-        }
-
-        public void setWemedia_image_small(String wemedia_image_small) {
-            this.wemedia_image_small = wemedia_image_small;
-        }
-
-        public void setWemedia_image_small_white(String wemedia_image_small_white) {
-            this.wemedia_image_small_white = wemedia_image_small_white;
-        }
-
-        public void setFake_id(int fake_id) {
-            this.fake_id = fake_id;
-        }
-
-        public void setCredentials(List<CredentialsEntity> credentials) {
-            this.credentials = credentials;
-        }
-
-        public int getXcid() {
-            return xcid;
-        }
-
-        public int getType() {
-            return type;
-        }
-
-        public String getIdent() {
-            return ident;
-        }
-
-        public String getNickname() {
-            return nickname;
-        }
-
-        public String getImage() {
-            return image;
-        }
-
-        public String getIntro() {
-            return intro;
-        }
-
-        public boolean getIs_editor() {
-            return is_editor;
-        }
-
-        public boolean getIs_push() {
-            return is_push;
-        }
-
-        public boolean getIs_block() {
-            return is_block;
-        }
-
-        public int getWemedia_type() {
-            return wemedia_type;
-        }
-
-        public int getSite_id() {
-            return site_id;
-        }
-
-        public String getWemedia_image_large() {
-            return wemedia_image_large;
-        }
-
-        public String getWemedia_image_small() {
-            return wemedia_image_small;
-        }
-
-        public String getWemedia_image_small_white() {
-            return wemedia_image_small_white;
-        }
-
-        public int getFake_id() {
-            return fake_id;
-        }
-
-        public List<CredentialsEntity> getCredentials() {
-            return credentials;
-        }
-
-        public static class CredentialsEntity {
-            /**
-             * xcid : 1078155
-             * type : 1
-             * ident : 1907323224
-             * token : 2.00otvEFC5EQLLE5e00477b80jvXrXC
-             */
-
-            private int xcid;
-            private int type;
-            private String ident;
-            private String token;
-
-            public void setXcid(int xcid) {
-                this.xcid = xcid;
-            }
-
-            public void setType(int type) {
-                this.type = type;
-            }
-
-            public void setIdent(String ident) {
-                this.ident = ident;
-            }
-
-            public void setToken(String token) {
-                this.token = token;
-            }
-
-            public int getXcid() {
-                return xcid;
-            }
-
-            public int getType() {
-                return type;
-            }
-
-            public String getIdent() {
-                return ident;
-            }
-
-            public String getToken() {
-                return token;
-            }
-        }
     }
 
     public static class ActivityEntity {

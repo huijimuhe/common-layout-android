@@ -6,9 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.data.xc.xcBanner;
-import com.huijimuhe.commonlayout.presenter.xc.xcContract;
 
 import java.util.ArrayList;
 import java.util.List;

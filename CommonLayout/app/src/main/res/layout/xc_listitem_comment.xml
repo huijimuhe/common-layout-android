@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/comment_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xc_selector_list_item"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="@dimen/xc_article_padding">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/xc_article_padding"
+            android:background="@color/tab_unselected_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/xc_article_padding"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:paddingTop="@dimen/xc_article_padding"
+            android:text="评论-Comment" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:scaleType="fitXY"
+            android:src="@color/divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment_click_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_title"
+        android:background="@drawable/xc_selector_list_item">
+
+        <com.huijimuhe.commonlayout.widget.CircularImageView
+            android:id="@+id/comment_author_header"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="@dimen/xc_article_padding"
+            android:layout_marginTop="15.0dip"
+            android:contentDescription="@null"
+            android:src="@android:drawable/ic_input_get" />
+
+        <TextView
+            android:id="@+id/floor_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/xc_article_padding"
+            android:layout_marginTop="15.0dip"
+            android:textColor="#ff979898"
+            android:text="3楼"
+            android:textSize="13.0sp" />
+
+        <LinearLayout
+            android:id="@+id/user_name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_toLeftOf="@id/floor_count"
+            android:layout_toRightOf="@+id/comment_author_header"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5.0dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:text="用户名"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/user_name_layout"
+            android:layout_below="@id/user_name_layout"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="2.0dip"
+            android:textColor="#ff979898"
+            android:text="发表时间"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/user_name_layout"
+            android:layout_alignRight="@id/floor_count"
+            android:layout_below="@id/create_time"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginTop="10.0dip"
+            android:lineSpacingExtra="4.0dip"
+            android:textColor="@android:color/black"
+            android:text="评论内容"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/comment_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignLeft="@id/user_name_layout"
+            android:layout_alignRight="@id/floor_count"
+            android:layout_below="@id/comment_content"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@color/divider" />
+    </RelativeLayout>
+</RelativeLayout>

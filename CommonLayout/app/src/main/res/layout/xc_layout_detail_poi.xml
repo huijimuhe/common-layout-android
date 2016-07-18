@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/card_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xc_selector_list_item"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/xc_article_padding">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/xc_article_padding"
+            android:background="@color/tab_unselected_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/xc_article_padding"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:paddingTop="@dimen/xc_article_padding"
+            android:text="店铺-Store" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/xc_article_padding"
+            android:paddingRight="@dimen/xc_article_padding"
+            android:scaleType="fitXY"
+            android:src="@color/divider" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bottom_line"
+        android:layout_below="@+id/card_title"
+        android:background="@drawable/xc_selector_list_item" />
+
+    <TextView
+        android:id="@+id/article_poi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginRight="@dimen/xc_article_padding"
+        android:layout_marginTop="13.0dip"
+        android:drawableLeft="@drawable/xc_articlescreen_shop_ic_shop"
+        android:drawablePadding="10.0dip"
+        android:drawableRight="@drawable/xc_articlescreen_shop_ic_enter"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="店铺名称"
+        android:textColor="@android:color/black"
+        android:textSize="20.0sp" />
+
+    <TextView
+        android:id="@+id/article_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_poi_title"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginTop="6.0dip"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:singleLine="true"
+        android:text="费用:"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/article_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_poi_title"
+        android:layout_marginRight="@dimen/xc_article_padding"
+        android:layout_marginTop="6.0dip"
+        android:layout_toRightOf="@id/article_price_title"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:singleLine="true"
+        android:text="120元/人"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/article_poi_phone_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_price"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginTop="6.0dip"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:singleLine="true"
+        android:text="电话:"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/article_poi_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_price"
+        android:layout_marginRight="6.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_toLeftOf="@+id/article_poi_call"
+        android:layout_toRightOf="@+id/article_poi_phone_title"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:singleLine="true"
+        android:text="15608199576"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/article_poi_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/article_poi_phone"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginTop="6.0dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:text="地址:"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/article_poi_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_poi_phone"
+        android:layout_marginRight="6.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_toLeftOf="@+id/article_poi_map"
+        android:layout_toRightOf="@+id/article_poi_address_title"
+        android:gravity="center_vertical"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip"
+        android:text="中国四川省成都市成华区万象城3F-223"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <ImageView
+        android:id="@+id/article_poi_call"
+        android:layout_width="47.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/article_poi_phone"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/article_poi_phone"
+        android:background="@drawable/xc_selector_list_item"
+        android:scaleType="center"
+        android:src="@drawable/xc_articlescreen_shop_ic_call" />
+
+    <View
+        android:id="@+id/article_poi_call_divider"
+        android:layout_width="0.5dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/article_poi_phone"
+        android:layout_alignTop="@+id/article_poi_phone"
+        android:layout_marginBottom="2.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_toLeftOf="@id/article_poi_call"
+        android:background="@color/divider" />
+
+    <ImageView
+        android:id="@id/article_poi_map"
+        android:layout_width="47.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/article_poi_address_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/article_poi_address_title"
+        android:background="@drawable/xc_selector_list_item"
+        android:scaleType="center"
+        android:src="@drawable/xc_articlescreen_shop_ic_pin" />
+
+    <View
+        android:id="@+id/article_poi_map_divider"
+        android:layout_width="0.5dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/article_poi_address_title"
+        android:layout_alignTop="@+id/article_poi_address_title"
+        android:layout_marginBottom="2.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_toLeftOf="@+id/article_poi_map"
+        android:background="@color/divider" />
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/article_poi_address"
+        android:layout_marginLeft="@dimen/xc_article_padding"
+        android:layout_marginRight="@dimen/xc_article_padding"
+        android:layout_marginTop="12.0dip"
+        android:background="@color/divider" />
+</RelativeLayout>

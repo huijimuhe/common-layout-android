@@ -13,7 +13,7 @@ import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.adapter.xcSaleAdapter;
 import com.huijimuhe.commonlayout.adapter.xcWeekAdapter;
 import com.huijimuhe.commonlayout.data.xc.source.IxcDataSource;
-import com.huijimuhe.commonlayout.data.xc.source.xcRepository;
+import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 import com.huijimuhe.commonlayout.utils.ToastUtils;
 import com.huijimuhe.commonlayout.widget.BannerView;
@@ -28,8 +28,8 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
 
         //Dummy data
-        xcRepository repository = new xcRepository();
-        repository.load(this, new IxcDataSource.LoadCallBack() {
+        xcListRepository repository = new xcListRepository();
+        repository.load(this, new IxcDataSource.ListLoadCallBack() {
             @Override
             public void onSuccess(xcIndexResponse response) {
                 initUI(response);

@@ -1,6 +1,7 @@
 package com.huijimuhe.commonlayout.data.xc.source;
 
 
+import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
 import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 
 /**
@@ -10,8 +11,14 @@ import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
  */
 public interface IxcDataSource {
 
-    interface LoadCallBack {
+    interface ListLoadCallBack {
         void onSuccess(xcIndexResponse response);
+
+        void onError(String msg);
+    }
+
+    interface DetailLoadCallBack {
+        void onSuccess(xcDetailResponse response);
 
         void onError(String msg);
     }

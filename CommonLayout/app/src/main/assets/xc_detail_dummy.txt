@@ -1,7 +1,6 @@
 ﻿ {
         "article": {
             "body": [
-                [
                     {
                         "type": 1,
                         "object": {
@@ -439,7 +438,6 @@
                             "is_favorite": false
                         }
                     }
-                ]
             ],
             "rating": "NONE",
             "rating_good_count": 194,

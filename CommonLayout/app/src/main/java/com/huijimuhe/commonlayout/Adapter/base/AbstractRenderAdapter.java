@@ -12,22 +12,14 @@ import java.util.List;
 
 public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<AbstractViewHolder> {
 
-    public static final int BTN_CLICK_DELETE = 0;
-    public static final int BTN_CLICK_REPORT = 1;
-    public static final int BTN_CLICK_CHAT = 2;
-    public static final int BTN_CLICK_IMG = 4;
-    public static final int BTN_CLICK_PROFILE = 5;
-    public static final int BTN_CLICK_PUBLISH = 6;
-
-    public static final int RENDER_TYPE_HEADER = 0x01 << 1;
-    public static final int RENDER_TYPE_NORMAL = 0x01 << 2;
+    public static final int RENDER_TYPE_HEADER = 110 << 1;
+    public static final int RENDER_TYPE_NORMAL = 110 << 2;
     public List<T> mDataset;
 
     public onItemClickListener mOnItemClickListener;
     public onItemFunctionClickListener mOnItemFunctionClickListener;
 
     private View mHeaderView;
-    // protected AbstractRender mRender;
 
     @Override
     public int getItemViewType(int position) {
