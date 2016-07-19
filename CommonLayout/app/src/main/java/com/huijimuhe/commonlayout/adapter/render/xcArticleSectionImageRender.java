@@ -12,8 +12,8 @@ import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
-import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
+import com.huijimuhe.commonlayout.adapter.xcArticleSectionAdapter;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 import com.huijimuhe.commonlayout.utils.ViewUtility;
 
 /**
@@ -31,11 +31,11 @@ import com.huijimuhe.commonlayout.utils.ViewUtility;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcSectionImageRender extends AbstractRender {
+public class xcArticleSectionImageRender extends AbstractRender {
     private ViewHolder mHolder;
-    private xcSectionAdapter mAdapter;
+    private xcArticleSectionAdapter mAdapter;
 
-    public xcSectionImageRender(ViewGroup parent, xcSectionAdapter adapter) {
+    public xcArticleSectionImageRender(ViewGroup parent, xcArticleSectionAdapter adapter) {
         this.mAdapter = adapter;
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_layout_section_image, parent, false);
@@ -45,7 +45,7 @@ public class xcSectionImageRender extends AbstractRender {
 
     @Override
     public void bindData(int position) {
-        xcSection.xcImage data=(xcSection.xcImage)mAdapter.getParagraph(position);
+        xcArticleSection.xcImage data=(xcArticleSection.xcImage)mAdapter.getParagraph(position);
         mHolder.mTvText.setText(data.getText());
         Glide.with(AppContext.getInstance().getApplicationContext()).load(data.getUrl()).into(mHolder.mIvBanner);
     }

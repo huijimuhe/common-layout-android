@@ -53,7 +53,7 @@ public class xcDetailActivity extends AppCompatActivity implements xcDetailContr
             public void run() {
                 mPresenter.load(xcDetailActivity.this);
             }
-        },1500);
+        },500);
     }
 
     @Override

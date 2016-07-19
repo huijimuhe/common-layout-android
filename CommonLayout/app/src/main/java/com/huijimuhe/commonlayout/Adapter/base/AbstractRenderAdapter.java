@@ -20,6 +20,7 @@ public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<Abst
     public onItemFunctionClickListener mOnItemFunctionClickListener;
 
     private View mHeaderView;
+    public boolean mIsSectionHeadShown;
 
     @Override
     public int getItemViewType(int position) {
@@ -50,6 +51,12 @@ public abstract class AbstractRenderAdapter<T> extends RecyclerView.Adapter<Abst
 
     public void replace(List<T> data) {
         this.mDataset = data;
+        notifyDataSetChanged();
+    }
+
+    public void replace(List<T> data, boolean isSectionHeadShown) {
+        this.mDataset = data;
+        this.mIsSectionHeadShown = isSectionHeadShown;
         notifyDataSetChanged();
     }
 

@@ -18,10 +18,11 @@ import com.huijimuhe.commonlayout.adapter.xcJxHeaderSaleAdapter;
 import com.huijimuhe.commonlayout.adapter.xcJxHeaderWeekAdapter;
 import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
+import com.huijimuhe.commonlayout.data.xc.xcArticleGroup;
 import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 import com.huijimuhe.commonlayout.data.xc.xcSale;
-import com.huijimuhe.commonlayout.presenter.xc.xcListContract;
-import com.huijimuhe.commonlayout.presenter.xc.xcListPresenter;
+import com.huijimuhe.commonlayout.presenter.xc.xcJXListContract;
+import com.huijimuhe.commonlayout.presenter.xc.xcJXListPresenter;
 import com.huijimuhe.commonlayout.ui.base.xcAbLceListFragment;
 import com.huijimuhe.commonlayout.xc.detail.xcDetailActivity;
 import com.huijimuhe.commonlayout.widget.BannerView;
@@ -29,12 +30,13 @@ import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 import com.huijimuhe.commonlayout.widget.SwitchTabView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
- * <p>
+ * <p/>
  * Contact: 20903213@qq.com Zengweizhou
- * <p>
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -45,9 +47,9 @@ import java.util.ArrayList;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcJXListFragment extends xcAbLceListFragment implements xcListContract.View {
+public class xcJXListFragment extends xcAbLceListFragment implements xcJXListContract.View {
 
-    private xcListPresenter mPresenter;
+    private xcJXListPresenter mPresenter;
     private HeaderViewWrapper mHeaderView;
 
     public static xcJXListFragment newInstance() {
@@ -61,7 +63,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new xcListPresenter(this, new xcListRepository());
+        mPresenter = new xcJXListPresenter(this, new xcListRepository());
         mPresenter.start();
 
         mTabView.setOnTabSelectedListener(new SwitchTabView.TabSelectedListener() {
@@ -82,7 +84,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
 
     @Override
     public AbstractRenderAdapter getRecyclerAdapter() {
-        return new xcJxListAdapter(new ArrayList<xcArticle>());
+        return new xcJxListAdapter(new ArrayList<xcArticleGroup>());
     }
 
     @Override
@@ -124,9 +126,13 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
     }
 
     @Override
-    public void updateList(xcIndexResponse response) {
-        mAdapter.replace(response.getFoods());
+    public void updateHeader(xcIndexResponse response) {
         mHeaderView.update(response);
+    }
+
+    @Override
+    public void updateList(List<xcArticleGroup> list, boolean isSectionHeaderShown) {
+        mAdapter.replace(list,isSectionHeaderShown);
     }
 
     @Override

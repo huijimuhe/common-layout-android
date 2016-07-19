@@ -12,6 +12,7 @@ import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
+import com.huijimuhe.commonlayout.adapter.xcJxListAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
 import com.huijimuhe.commonlayout.widget.LikeButtonList;
 
@@ -23,9 +24,9 @@ import com.huijimuhe.commonlayout.widget.LikeButtonList;
  */
 public class xcArticleRender extends AbstractRender {
     private ViewHolder mHolder;
-    private AbstractRenderAdapter mAdapter;
+    private xcJxListAdapter mAdapter;
 
-    public xcArticleRender(ViewGroup parent, AbstractRenderAdapter adapter) {
+    public xcArticleRender(ViewGroup parent, xcJxListAdapter adapter) {
         this.mAdapter = adapter;
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_listitem_article, parent, false);
@@ -35,7 +36,7 @@ public class xcArticleRender extends AbstractRender {
 
     @Override
     public void bindData(int position) {
-        xcArticle data=(xcArticle)mAdapter.getItem(position);
+        xcArticle data=mAdapter.getArticle(position);
         mHolder.mTvTitle.setText(data.getTitle());
         mHolder.mTvSubTitle.setText(String.format("距离-%s",data.getSub_title()));
         mHolder.mLikeList.setText(String.valueOf(data.getPraise_count()));

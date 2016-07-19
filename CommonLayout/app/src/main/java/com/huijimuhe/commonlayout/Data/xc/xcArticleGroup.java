@@ -44,6 +44,14 @@ public class xcArticleGroup {
     private List<xcArticle> articles;
     private int type;
 
+    public List<xcArticle> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<xcArticle> articles) {
+        this.articles = articles;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

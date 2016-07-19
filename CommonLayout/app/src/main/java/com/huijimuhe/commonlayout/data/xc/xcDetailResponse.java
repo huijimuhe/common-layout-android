@@ -114,11 +114,11 @@ public class xcDetailResponse {
         private int comment_count;
         private ActivityEntity activity;
         private List<PoisEntity> pois;
-        private List<xcSection> body;
-        public List<xcSection> getBody() {
+        private List<xcArticleSection> body;
+        public List<xcArticleSection> getBody() {
             return body;
         }
-        public void setBody(List<xcSection> body) {
+        public void setBody(List<xcArticleSection> body) {
             this.body = body;
         }
 

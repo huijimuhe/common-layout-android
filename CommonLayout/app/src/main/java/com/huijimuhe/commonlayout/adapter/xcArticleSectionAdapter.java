@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
-import com.huijimuhe.commonlayout.adapter.render.xcSectionImageRender;
-import com.huijimuhe.commonlayout.adapter.render.xcSectionTextRender;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
+import com.huijimuhe.commonlayout.adapter.render.xcArticleSectionImageRender;
+import com.huijimuhe.commonlayout.adapter.render.xcArticleSectionTextRender;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 
 import java.util.List;
 
@@ -28,13 +28,13 @@ import java.util.List;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
-    public static int TYPE_TEXT = 1 << 1;
-    public static int TYPE_IMAGE = 1 << 2;
+public class xcArticleSectionAdapter extends AbstractRenderAdapter<xcArticleSection> {
+    public static final int TYPE_TEXT = 1 << 1;
+    public static final int TYPE_IMAGE = 1 << 2;
 
     private ArrayMap<Integer, Integer> mSection;
 
-    public xcSectionAdapter(List<xcSection> data) {
+    public xcArticleSectionAdapter(List<xcArticleSection> data) {
         this.mDataset = data;
         mSection = new ArrayMap<>();
     }
@@ -115,15 +115,15 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
         }
     }
 
-    public xcSection.IParagraph getParagraph(int position) {
-        xcSection section = getItem(position);
+    public xcArticleSection.IParagraph getParagraph(int position) {
+        xcArticleSection section = getItem(position);
         if (section.getType() == 1) {
             return section.getContentObject();
         }
         int relative = getParagraphPosition(position);
-        xcSection.IParagraph qq = (xcSection.IParagraph) section.getContentArray().get(relative);
+        xcArticleSection.IParagraph qq = (xcArticleSection.IParagraph) section.getContentArray().get(relative);
 
-        return (xcSection.IParagraph) section.getContentArray().get(getParagraphPosition(position));
+        return (xcArticleSection.IParagraph) section.getContentArray().get(getParagraphPosition(position));
     }
 
     @Override
@@ -131,12 +131,12 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
         if (super.getItemViewType(position) == RENDER_TYPE_HEADER) {
             return super.getItemViewType(position);
         }
-        xcSection section = getItem(position);
+        xcArticleSection section = getItem(position);
         switch (section.getType()) {
             case 2:
-                return 2;
+                return TYPE_TEXT;
             case 3:
-                return 3;
+                return TYPE_IMAGE;
             default:
                 return 4;
         }
@@ -151,13 +151,13 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
             return holder;
         }
         switch (viewType) {
-            case 2:
-                xcSectionTextRender text = new xcSectionTextRender(viewGroup, this);
+            case TYPE_TEXT:
+                xcArticleSectionTextRender text = new xcArticleSectionTextRender(viewGroup, this);
                 AbstractViewHolder textholder = text.getReusableComponent();
                 textholder.itemView.setTag(android.support.design.R.id.list_item, text);
                 return textholder;
-            case 3:
-                xcSectionImageRender image = new xcSectionImageRender(viewGroup, this);
+            case TYPE_IMAGE:
+                xcArticleSectionImageRender image = new xcArticleSectionImageRender(viewGroup, this);
                 AbstractViewHolder imgHolder = image.getReusableComponent();
                 imgHolder.itemView.setTag(android.support.design.R.id.list_item, image);
                 return imgHolder;

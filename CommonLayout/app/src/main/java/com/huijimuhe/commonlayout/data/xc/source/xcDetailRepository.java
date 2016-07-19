@@ -5,10 +5,7 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -43,7 +40,7 @@ public class xcDetailRepository {
             e.printStackTrace();
         }
 
-        List<xcSection> body = new Gson().fromJson(Result, new TypeToken<List<xcSection>>() {
+        List<xcArticleSection> body = new Gson().fromJson(Result, new TypeToken<List<xcArticleSection>>() {
         }.getType());
 
         int count=body.size();

@@ -15,16 +15,15 @@ import com.huijimuhe.commonlayout.AppContext;
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.xcCommentAdapter;
-import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
+import com.huijimuhe.commonlayout.adapter.xcArticleSectionAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcComment;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 import com.huijimuhe.commonlayout.ui.base.xcAbLceListFragment;
 import com.huijimuhe.commonlayout.utils.ViewUtility;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
@@ -132,7 +131,7 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
          * section body list
          */
         private NoScrollRecyclerView bodyList;
-        private xcSectionAdapter sectionAdapter;
+        private xcArticleSectionAdapter sectionAdapter;
         private HeaderViewWrapperClickListener l;
         private LinearLayout root;
 
@@ -179,7 +178,7 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
             saleManager.setOrientation(LinearLayoutManager.VERTICAL);
             bodyList.setLayoutManager(saleManager);
 
-            sectionAdapter = new xcSectionAdapter(new ArrayList<xcSection>());
+            sectionAdapter = new xcArticleSectionAdapter(new ArrayList<xcArticleSection>());
             sectionAdapter.setOnItemClickListener(new AbstractRenderAdapter.onItemClickListener() {
                 @Override
                 public void onItemClick(View view, int postion) {

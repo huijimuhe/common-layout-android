@@ -9,8 +9,8 @@ import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
-import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
+import com.huijimuhe.commonlayout.adapter.xcArticleSectionAdapter;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 
 
 /**
@@ -18,11 +18,11 @@ import com.huijimuhe.commonlayout.data.xc.xcSection;
  * This is a part of Homedev
  * enjoy
  */
-public class xcSectionTextRender extends AbstractRender {
+public class xcArticleSectionTextRender extends AbstractRender {
     private ViewHolder mHolder;
-    private xcSectionAdapter mAdapter;
+    private xcArticleSectionAdapter mAdapter;
 
-    public xcSectionTextRender(ViewGroup parent, xcSectionAdapter adapter) {
+    public xcArticleSectionTextRender(ViewGroup parent, xcArticleSectionAdapter adapter) {
         this.mAdapter = adapter;
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_layout_section_text, parent, false);
@@ -32,7 +32,7 @@ public class xcSectionTextRender extends AbstractRender {
 
     @Override
     public void bindData(int position) {
-        xcSection.xcText data=(xcSection.xcText)mAdapter.getParagraph(position);
+        xcArticleSection.xcText data=(xcArticleSection.xcText)mAdapter.getParagraph(position);
         mHolder.mTvText.setText(data.getText());
     }
 

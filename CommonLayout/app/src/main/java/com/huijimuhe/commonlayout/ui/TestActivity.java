@@ -8,11 +8,11 @@ import android.view.View;
 
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
-import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
+import com.huijimuhe.commonlayout.adapter.xcArticleSectionAdapter;
 import com.huijimuhe.commonlayout.data.xc.source.IxcDataSource;
 import com.huijimuhe.commonlayout.data.xc.source.xcDetailRepository;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
-import com.huijimuhe.commonlayout.data.xc.xcSection;
+import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
 import com.huijimuhe.commonlayout.utils.ToastUtils;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 
@@ -60,8 +60,8 @@ public class TestActivity extends AppCompatActivity {
         saleManager.setOrientation(LinearLayoutManager.VERTICAL);
         saleList.setLayoutManager(saleManager);
 
-        List<xcSection> data=dummy.getArticle().getBody();
-        xcSectionAdapter saleAdapter = new xcSectionAdapter(data);
+        List<xcArticleSection> data=dummy.getArticle().getBody();
+        xcArticleSectionAdapter saleAdapter = new xcArticleSectionAdapter(data);
         saleAdapter.setOnItemClickListener(new AbstractRenderAdapter.onItemClickListener() {
             @Override
             public void onItemClick(View view, int postion) {

@@ -26,8 +26,8 @@ import java.util.List;
  * limitations under the License.
  */
 
-@JsonAdapter(xcSection.xcSectionJsonAdapter.class)
-public class xcSection<T extends xcSection.IParagraph> {
+@JsonAdapter(xcArticleSection.xcSectionJsonAdapter.class)
+public class xcArticleSection<T extends xcArticleSection.IParagraph> {
 
     private int type;
     private IParagraph contentObject;
@@ -134,15 +134,15 @@ public class xcSection<T extends xcSection.IParagraph> {
     }
 
 
-    public class xcSectionJsonAdapter extends TypeAdapter<xcSection> {
+    public class xcSectionJsonAdapter extends TypeAdapter<xcArticleSection> {
         @Override
-        public void write(JsonWriter out, xcSection value) {
+        public void write(JsonWriter out, xcArticleSection value) {
 
         }
 
         @Override
-        public xcSection read(JsonReader in) {
-            xcSection data = new xcSection();
+        public xcArticleSection read(JsonReader in) {
+            xcArticleSection data = new xcArticleSection();
             try {
                 in.beginObject();
                 in.skipValue();
