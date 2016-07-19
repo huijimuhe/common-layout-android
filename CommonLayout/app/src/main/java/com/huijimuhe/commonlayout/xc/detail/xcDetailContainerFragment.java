@@ -3,6 +3,7 @@ package com.huijimuhe.commonlayout.xc.detail;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,15 +15,16 @@ import com.huijimuhe.commonlayout.AppContext;
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.xcCommentAdapter;
-import com.huijimuhe.commonlayout.adapter.xcSaleAdapter;
-import com.huijimuhe.commonlayout.adapter.xcWeekAdapter;
+import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcComment;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
+import com.huijimuhe.commonlayout.data.xc.xcSection;
 import com.huijimuhe.commonlayout.ui.base.xcAbLceListFragment;
 import com.huijimuhe.commonlayout.utils.ViewUtility;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Copyright (C) 2016 Huijimuhe Technologies. All rights reserved.
@@ -59,7 +61,7 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
 
     public void load(xcDetailResponse data) {
         showContentView();
-        this.mResponse =data;
+        this.mResponse = data;
         mAdapter.replace(mResponse.getComments());
         mHeaderView.init(mResponse);
     }
@@ -107,22 +109,30 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
     }
 
     private class HeaderViewWrapper {
-        /**Top Image*/
+        /**
+         * Top Image
+         */
         private ImageView ivTop;
         private TextView tvTitle;
         private TextView tvSubTitle;
-        /**Author Intro*/
+        /**
+         * Author Intro
+         */
         private ImageView ivAvatar;
         private TextView tvName;
         private TextView tvUserIntro;
         private TextView tvArticleIntro;
-        /**recommend*/
+        /**
+         * recommend
+         */
         private ImageView ivRecommendImg;
         private TextView tvRecommendTitle;
         private TextView tvRecommendBody;
-
+        /**
+         * section body list
+         */
         private NoScrollRecyclerView bodyList;
-
+        private xcSectionAdapter sectionAdapter;
         private HeaderViewWrapperClickListener l;
         private LinearLayout root;
 
@@ -164,6 +174,19 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
             ivRecommendImg = ViewUtility.findViewById(view, R.id.card_advertise_icon);
 
             /**Article Body*/
+            bodyList = ViewUtility.findViewById(view, R.id.article_content_list);
+            LinearLayoutManager saleManager = new LinearLayoutManager(getActivity());
+            saleManager.setOrientation(LinearLayoutManager.VERTICAL);
+            bodyList.setLayoutManager(saleManager);
+
+            sectionAdapter = new xcSectionAdapter(new ArrayList<xcSection>());
+            sectionAdapter.setOnItemClickListener(new AbstractRenderAdapter.onItemClickListener() {
+                @Override
+                public void onItemClick(View view, int postion) {
+
+                }
+            });
+            bodyList.setAdapter(sectionAdapter);
 
             /**store poi*/
             //Fake your own
@@ -183,6 +206,9 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
             Glide.with(AppContext.getInstance().getApplicationContext()).load(response.getAds().getImage()).into(ivRecommendImg);
             tvRecommendBody.setText(response.getAds().getDesc());
             tvRecommendTitle.setText(response.getAds().getTitle());
+
+            /**Article Body*/
+            sectionAdapter.replace(response.getArticle().getBody());
         }
     }
 

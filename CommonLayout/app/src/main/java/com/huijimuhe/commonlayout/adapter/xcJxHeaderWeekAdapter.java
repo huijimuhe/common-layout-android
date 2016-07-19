@@ -30,18 +30,18 @@ import java.util.List;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcWeekAdapter extends AbstractAdapter<xcWeekAdapter.ViewHolder> {
+public class xcJxHeaderWeekAdapter extends AbstractAdapter<xcJxHeaderWeekAdapter.ViewHolder> {
     private List<xcArticle> mDataset;
     private Context mContext;
 
-    public xcWeekAdapter(List<xcArticle> data, Context context) {
+    public xcJxHeaderWeekAdapter(List<xcArticle> data, Context context) {
         mDataset = data;
         mContext = context;
     }
 
     @Override
-    public xcWeekAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                       int viewType) {
+    public xcJxHeaderWeekAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                               int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_listitem_week, parent, false);
         return new ViewHolder(v);

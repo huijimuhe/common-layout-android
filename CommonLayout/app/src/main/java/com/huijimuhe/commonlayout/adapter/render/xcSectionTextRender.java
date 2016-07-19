@@ -3,18 +3,14 @@ package com.huijimuhe.commonlayout.adapter.render;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.huijimuhe.commonlayout.AppContext;
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
-import com.huijimuhe.commonlayout.data.xc.xcArticle;
+import com.huijimuhe.commonlayout.adapter.xcSectionAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcSection;
-import com.huijimuhe.commonlayout.widget.LikeButtonList;
 
 
 /**
@@ -24,20 +20,20 @@ import com.huijimuhe.commonlayout.widget.LikeButtonList;
  */
 public class xcSectionTextRender extends AbstractRender {
     private ViewHolder mHolder;
-    private AbstractRenderAdapter mAdapter;
+    private xcSectionAdapter mAdapter;
 
-    public xcSectionTextRender(ViewGroup parent, AbstractRenderAdapter adapter) {
+    public xcSectionTextRender(ViewGroup parent, xcSectionAdapter adapter) {
         this.mAdapter = adapter;
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.xc_listitem_article, parent, false);
+                .inflate(R.layout.xc_layout_section_text, parent, false);
         this.mHolder = new ViewHolder(v, adapter);
     }
 
 
     @Override
     public void bindData(int position) {
-        xcSection<xcSection.xcText> data=(xcSection)mAdapter.getItem(position);
-        mHolder.mTvText.setText(data.getContentArray().get(position).getText());
+        xcSection.xcText data=(xcSection.xcText)mAdapter.getParagraph(position);
+        mHolder.mTvText.setText(data.getText());
     }
 
     @Override
@@ -50,7 +46,7 @@ public class xcSectionTextRender extends AbstractRender {
 
         public ViewHolder(View v, final AbstractRenderAdapter adapter) {
             super(v);
-            mTvText=(TextView)v.findViewById(R.id.article_title);
+            mTvText=(TextView)v.findViewById(R.id.section_text);
 
         }
     }

@@ -1,11 +1,12 @@
 package com.huijimuhe.commonlayout.data.xc;
 
+import android.util.Log;
+
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +27,10 @@ import java.util.List;
  */
 
 @JsonAdapter(xcSection.xcSectionJsonAdapter.class)
-public class xcSection<T extends xcSection.ISection> {
+public class xcSection<T extends xcSection.IParagraph> {
 
     private int type;
-    private ISection contentObject;
+    private IParagraph contentObject;
     private List<T> contentArray;
 
     public int getType() {
@@ -48,19 +49,19 @@ public class xcSection<T extends xcSection.ISection> {
         this.contentArray = contentArray;
     }
 
-    public ISection getContentObject() {
+    public IParagraph getContentObject() {
         return contentObject;
     }
 
-    public void setContentObject(ISection contentObject) {
+    public void setContentObject(IParagraph contentObject) {
         this.contentObject = contentObject;
     }
 
-    public interface ISection {
+    public interface IParagraph {
 
     }
 
-    public static class xcImage implements ISection {
+    public static class xcImage implements IParagraph {
         private String url;
         private String text;
         private int width;
@@ -99,7 +100,7 @@ public class xcSection<T extends xcSection.ISection> {
         }
     }
 
-    public static class xcText implements ISection {
+    public static class xcText implements IParagraph {
         private String text;
 
         public String getText() {
@@ -111,7 +112,7 @@ public class xcSection<T extends xcSection.ISection> {
         }
     }
 
-    public static class xcTitle implements ISection {
+    public static class xcTitle implements IParagraph {
         private String title;
         private String subTitle;
 
@@ -135,13 +136,13 @@ public class xcSection<T extends xcSection.ISection> {
 
     public class xcSectionJsonAdapter extends TypeAdapter<xcSection> {
         @Override
-        public void write(JsonWriter out, xcSection value) throws IOException {
+        public void write(JsonWriter out, xcSection value) {
 
         }
 
         @Override
-        public xcSection read(JsonReader in) throws IOException {
-            xcSection data=new xcSection();
+        public xcSection read(JsonReader in) {
+            xcSection data = new xcSection();
             try {
                 in.beginObject();
                 in.skipValue();
@@ -151,80 +152,71 @@ public class xcSection<T extends xcSection.ISection> {
                         data.setContentObject(readTitle(in));
                         break;
                     case 2:
-                       data.setContentArray(readText(in));
+                        data.setContentArray(readText(in));
                         break;
                     case 3:
-                        readImages(in);
+                        data.setContentArray(readImages(in));
                         break;
                     case 4:
                         break;
                     case 5:
                         break;
+                    default:
+                        Log.d("yese", "here is thit");
+                        break;
                 }
                 in.endObject();
-
             } catch (Exception e) {
                 e.printStackTrace();
+            } finally {
+                return data;
             }
-            return data;
         }
 
-        private xcTitle readTitle(JsonReader in) {
+        private xcTitle readTitle(JsonReader in) throws Exception {
             xcTitle data = new xcTitle();
-            try {
-                in.skipValue();
-                in.beginObject();
-                in.skipValue();
-                data.setTitle(in.nextString());
-                in.skipValue();
-                data.setSubTitle(in.nextString());
-                in.endObject();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            in.skipValue();
+            in.beginObject();
+            in.skipValue();
+            data.setTitle(in.nextString());
+            in.skipValue();
+            data.setSubTitle(in.nextString());
+            in.endObject();
             return data;
         }
 
-        private List<xcText> readText(JsonReader in) {
+        private List<xcText> readText(JsonReader in) throws Exception {
             List<xcText> data = new ArrayList<>();
-            try {
-                in.skipValue();
-                in.beginArray();
-                while (in.hasNext()) {
-                    xcText item = new xcText();
-                    item.setText(in.nextString());
-                    data.add(item);
-                }
-                in.endArray();
-            } catch (Exception e) {
-                e.printStackTrace();
+            in.skipValue();
+            in.beginArray();
+            while (in.hasNext()) {
+                xcText item = new xcText();
+                item.setText(in.nextString());
+                data.add(item);
             }
+            in.endArray();
             return data;
         }
 
-        private List<xcImage> readImages(JsonReader in) {
+        private List<xcImage> readImages(JsonReader in) throws Exception {
             List<xcImage> data = new ArrayList<>();
-            try {
+            in.skipValue();
+            in.beginArray();
+            while (in.hasNext()) {
+                in.beginObject();
+                xcImage item = new xcImage();
                 in.skipValue();
-                in.beginArray();
-                while (in.hasNext()) {
-                    in.beginObject();
-                    xcImage item = new xcImage();
-                    in.skipValue();
-                    item.setUrl(in.nextString());
-                    in.skipValue();
-                    item.setText(in.nextString());
-                    in.skipValue();
-                    item.setWidth(in.nextInt());
-                    in.skipValue();
-                    item.setHeight(in.nextInt());
-                    data.add(item);
-                    in.endObject();
-                }
-                in.endArray();
-            } catch (Exception e) {
-                e.printStackTrace();
+                item.setUrl(in.nextString());
+                in.skipValue();
+                item.setText(in.nextString());
+                in.skipValue();
+                item.setWidth(in.nextInt());
+                in.skipValue();
+                item.setHeight(in.nextInt());
+                data.add(item);
+                in.endObject();
             }
+            in.endArray();
             return data;
         }
     }

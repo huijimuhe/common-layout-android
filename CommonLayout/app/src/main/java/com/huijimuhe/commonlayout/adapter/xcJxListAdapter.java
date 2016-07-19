@@ -11,9 +11,9 @@ import com.huijimuhe.commonlayout.data.xc.xcArticle;
 
 import java.util.List;
 
-public class xcArticleAdapter extends AbstractRenderAdapter<xcArticle> {
+public class xcJxListAdapter extends AbstractRenderAdapter<xcArticle> {
 
-    public xcArticleAdapter(List<xcArticle> data) {
+    public xcJxListAdapter(List<xcArticle> data) {
         this.mDataset=data;
     }
 

@@ -13,9 +13,9 @@ import android.widget.LinearLayout;
 import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
-import com.huijimuhe.commonlayout.adapter.xcArticleAdapter;
-import com.huijimuhe.commonlayout.adapter.xcSaleAdapter;
-import com.huijimuhe.commonlayout.adapter.xcWeekAdapter;
+import com.huijimuhe.commonlayout.adapter.xcJxListAdapter;
+import com.huijimuhe.commonlayout.adapter.xcJxHeaderSaleAdapter;
+import com.huijimuhe.commonlayout.adapter.xcJxHeaderWeekAdapter;
 import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
 import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
@@ -82,7 +82,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
 
     @Override
     public AbstractRenderAdapter getRecyclerAdapter() {
-        return new xcArticleAdapter(new ArrayList<xcArticle>());
+        return new xcJxListAdapter(new ArrayList<xcArticle>());
     }
 
     @Override
@@ -159,13 +159,13 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
         private NoScrollRecyclerView saleList;
         private RecyclerView weekList;
         private SwitchTabView tabView;
-        private xcSaleAdapter saleAdapter;
-        private xcWeekAdapter weekAdapter;
+        private xcJxHeaderSaleAdapter saleAdapter;
+        private xcJxHeaderWeekAdapter weekAdapter;
         private HeaderViewWrapperClickListener l;
         private LinearLayout root;
 
         public HeaderViewWrapper(Context context) {
-            root = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.xc_listheader_list, mRecyclerView, false);
+            root = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.xc_listheader_jx_list, mRecyclerView, false);
             initUI(root, context);
         }
 
@@ -194,7 +194,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
             saleManager.setOrientation(LinearLayoutManager.VERTICAL);
             saleList.setLayoutManager(saleManager);
 
-            saleAdapter = new xcSaleAdapter(new ArrayList<xcSale>(), context);
+            saleAdapter = new xcJxHeaderSaleAdapter(new ArrayList<xcSale>(), context);
             saleAdapter.setOnItemClickListener(new AbstractAdapter.onItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
@@ -209,7 +209,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcListContr
             weekManager.setOrientation(LinearLayoutManager.HORIZONTAL);
             weekList.setLayoutManager(weekManager);
 
-            weekAdapter = new xcWeekAdapter(new ArrayList<xcArticle>(), context);
+            weekAdapter = new xcJxHeaderWeekAdapter(new ArrayList<xcArticle>(), context);
             weekAdapter.setOnItemClickListener(new AbstractAdapter.onItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {

@@ -30,18 +30,18 @@ import java.util.List;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcSaleAdapter extends AbstractAdapter<xcSaleAdapter.ViewHolder> {
+public class xcJxHeaderSaleAdapter extends AbstractAdapter<xcJxHeaderSaleAdapter.ViewHolder> {
     private List<xcSale> mDataset;
     private Context mContext;
 
-    public xcSaleAdapter(List<xcSale> data,Context context) {
+    public xcJxHeaderSaleAdapter(List<xcSale> data, Context context) {
         mDataset = data;
         mContext=context;
     }
 
     @Override
-    public xcSaleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                         int viewType) {
+    public xcJxHeaderSaleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                               int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.xc_listitem_sale, parent, false);
         return new ViewHolder(v);

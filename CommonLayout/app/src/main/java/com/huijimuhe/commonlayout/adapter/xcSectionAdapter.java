@@ -1,27 +1,16 @@
 package com.huijimuhe.commonlayout.adapter;
 
 import android.annotation.TargetApi;
-import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.support.v4.util.ArrayMap;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.huijimuhe.commonlayout.R;
-import com.huijimuhe.commonlayout.adapter.base.AbstractAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRender;
 import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.base.AbstractViewHolder;
-import com.huijimuhe.commonlayout.adapter.render.xcArticleRender;
 import com.huijimuhe.commonlayout.adapter.render.xcSectionImageRender;
 import com.huijimuhe.commonlayout.adapter.render.xcSectionTextRender;
-import com.huijimuhe.commonlayout.data.xc.xcSale;
 import com.huijimuhe.commonlayout.data.xc.xcSection;
 
-import java.security.PublicKey;
 import java.util.List;
 
 /**
@@ -43,8 +32,98 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
     public static int TYPE_TEXT = 1 << 1;
     public static int TYPE_IMAGE = 1 << 2;
 
+    private ArrayMap<Integer, Integer> mSection;
+
     public xcSectionAdapter(List<xcSection> data) {
         this.mDataset = data;
+        mSection = new ArrayMap<>();
+    }
+
+    @Override
+    public int getItemCount() {
+        int size = 0;
+
+        //list头
+        if (hasHeaderView()) {
+            size++;
+        }
+        mSection.clear();
+        for (int i = 0; i < mDataset.size(); i++) {
+
+            switch (mDataset.get(i).getType()) {
+                case 2:
+                case 3:
+                    size += mDataset.get(i).getContentArray().size();
+                    break;
+                default:
+                    size++;
+                    break;
+            }
+            //分段，根据position知道是第几个section
+            mSection.put(size, i);
+        }
+
+        return size;
+    }
+
+    /**
+     * 根据列表实际位置计算是第几个section
+     *
+     * @param position
+     * @return
+     */
+    @Override
+    public int getRealPosition(int position) {
+        synchronized (mSection) {
+            //去掉头的影响
+            if (hasHeaderView() && position != 0) {
+                position -= 1;
+            }
+
+            //根据列表实际位置计算是第几个section
+            int relativePos = 0;
+            for (Integer sectionSize : mSection.keySet()) {
+                if (position < sectionSize) {
+                    relativePos = sectionSize;
+                    break;
+                }
+            }
+            int testRes = mSection.get(relativePos);
+            return mSection.get(relativePos);
+        }
+    }
+
+    /**
+     * 根据列表实际位置计算在section中的相对位置
+     *
+     * @param position
+     * @return
+     */
+    public int getParagraphPosition(int position) {
+        synchronized (mSection) {
+            //去掉头的影响
+            if (hasHeaderView() && position != 0) {
+                position -= 1;
+            }
+
+            //根据列表实际位置计算在section中的相对位置
+            if (position == 0) {
+                return position;
+            }
+            int relativePos = mSection.keyAt(getRealPosition(position) - 1);
+            return position - relativePos;
+        }
+    }
+
+    public xcSection.IParagraph getParagraph(int position) {
+        xcSection section = getItem(position);
+        if (section.getType() == 1) {
+            return section.getContentObject();
+        }
+        int relative = getParagraphPosition(position);
+        xcSection.IParagraph qq = (xcSection.IParagraph) section.getContentArray().get(relative);
+
+        return (xcSection.IParagraph) section.getContentArray().get(getParagraphPosition(position));
     }
 
     @Override
@@ -55,11 +134,11 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
         xcSection section = getItem(position);
         switch (section.getType()) {
             case 2:
-                return TYPE_TEXT;
+                return 2;
             case 3:
-                return TYPE_IMAGE;
+                return 3;
             default:
-                return RENDER_TYPE_NORMAL;
+                return 4;
         }
     }
 
@@ -78,10 +157,10 @@ public class xcSectionAdapter extends AbstractRenderAdapter<xcSection> {
                 textholder.itemView.setTag(android.support.design.R.id.list_item, text);
                 return textholder;
             case 3:
-//                xcSectionImageRender image = new xcSectionImageRender(viewGroup, this);
-//                AbstractViewHolder imgHolder = image.getReusableComponent();
-//                imgHolder.itemView.setTag(android.support.design.R.id.list_item, image);
-//                return imgHolder;
+                xcSectionImageRender image = new xcSectionImageRender(viewGroup, this);
+                AbstractViewHolder imgHolder = image.getReusableComponent();
+                imgHolder.itemView.setTag(android.support.design.R.id.list_item, image);
+                return imgHolder;
             default:
                 return null;
         }

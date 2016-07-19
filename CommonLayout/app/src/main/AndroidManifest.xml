@@ -21,9 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.TestActivity" />
+        <activity android:name=".ui.TestActivity">
+
+        </activity>
         <activity android:name=".xc.detail.xcDetailActivity" />
-        <activity android:name=".ui.NavActivity"></activity>
+        <activity android:name=".ui.NavActivity" />
     </application>
 
 </manifest>

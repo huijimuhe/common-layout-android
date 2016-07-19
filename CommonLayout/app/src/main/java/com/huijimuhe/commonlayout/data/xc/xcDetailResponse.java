@@ -114,16 +114,13 @@ public class xcDetailResponse {
         private int comment_count;
         private ActivityEntity activity;
         private List<PoisEntity> pois;
-
-//        private List<xcSection> body;
-//
-//        public List<xcSection> getBody() {
-//            return body;
-//        }
-//
-//        public void setBody(List<xcSection> body) {
-//            this.body = body;
-//        }
+        private List<xcSection> body;
+        public List<xcSection> getBody() {
+            return body;
+        }
+        public void setBody(List<xcSection> body) {
+            this.body = body;
+        }
 
         public void setRating(String rating) {
             this.rating = rating;
