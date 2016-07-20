@@ -4,9 +4,7 @@ import android.content.Context;
 
 import com.huijimuhe.commonlayout.data.xc.source.IxcDataSource;
 import com.huijimuhe.commonlayout.data.xc.source.xcDetailRepository;
-import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
 
 /**
  * Created by Huijimuhe on 2016/6/26.

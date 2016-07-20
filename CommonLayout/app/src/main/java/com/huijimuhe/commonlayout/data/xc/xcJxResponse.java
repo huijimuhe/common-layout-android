@@ -7,7 +7,7 @@ import java.util.List;
  * This is a part of Lanwen
  * enjoy
  */
-public class xcIndexResponse {
+public class xcJxResponse {
 
     private List<xcBanner> ads_top;
     private List<xcSale> sales;

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xc_selector_list_card"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="57.0dip">
+
+        <com.huijimuhe.commonlayout.widget.CircularImageView
+            android:id="@+id/feed_list_author_header"
+            android:layout_width="34.0dip"
+            android:layout_height="34.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.0dip"
+            android:contentDescription="@null"
+            android:src="#f3f3f3" />
+
+        <RelativeLayout
+            android:id="@+id/feed_list_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:id="@+id/feed_list_praise_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="27.0dip"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/feed_list_comment"
+                    android:layout_width="40.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/xc_selector_list_item"
+                    android:drawableTop="@drawable/xc_feed_ic_comment"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:singleLine="true"
+                    android:text="18"
+                    android:textColor="#ff8e8e8e"
+                    android:textSize="10.0sp" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="27.0dip"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/feed_list_praise"
+                    android:layout_width="40.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/xc_selector_list_item"
+                    android:drawableTop="@drawable/xc_feed_ic_favorite"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:singleLine="true"
+                    android:text="232"
+                    android:textColor="@color/black_alpha_70"
+                    android:textSize="10.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feed_list_fail_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="27.0dip"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/feed_list_retry"
+                    android:layout_width="44.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/xc_selector_list_item"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="出问题了！"
+                    android:textColor="#fffe4537"
+                    android:textSize="12.0sp" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="27.0dip"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/feed_list_delete"
+                    android:layout_width="44.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/xc_selector_list_item"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="被删了"
+                    android:textColor="#fffe4537"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="3.0dip"
+            android:layout_toLeftOf="@id/feed_list_right_layout"
+            android:layout_toRightOf="@id/feed_list_author_header"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/feed_list_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5.0dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="作者名称"
+                android:textColor="@color/black_alpha_70"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/feed_list_author_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="发表时间"
+                android:textColor="#ff979797"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:background="@color/divider"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/feed_list_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="12.0dip"
+        android:ellipsize="end"
+        android:lineSpacingExtra="6.0dip"
+        android:maxLines="2"
+        android:text="我是内容我是内容我是内容我是内容"
+        android:textColor="#ff7f7f7f"
+        android:textSize="14.0sp" />
+
+    <com.huijimuhe.commonlayout.widget.NineGridLayout
+        android:id="@+id/feed_list_grid_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="9.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/feed_list_poi_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@drawable/xc_selector_list_item"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/fresh_poi_icon"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/xc_discover_category_nearby" />
+
+        <TextView
+            android:id="@+id/feed_list_poi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toRightOf="@id/fresh_poi_icon"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="万象城"
+            android:textColor="@color/black_alpha_70"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/feed_list_poi_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4.0dip"
+            android:singleLine="true"
+            android:textColor="@color/black_alpha_70"
+            android:textSize="12.0sp" />
+
+    </RelativeLayout>
+</LinearLayout>

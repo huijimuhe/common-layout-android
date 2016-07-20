@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/discover_pull_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/discover_scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/in_hot_layout"
+                    layout="@layout/xc_layout_fx_hot_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21.0dip" />
+
+                <include
+                    android:id="@+id/in_features_layout"
+                    layout="@layout/xc_layout_fx_features"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

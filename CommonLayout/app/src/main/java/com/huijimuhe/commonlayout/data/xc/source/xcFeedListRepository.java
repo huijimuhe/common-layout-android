@@ -3,7 +3,8 @@ package com.huijimuhe.commonlayout.data.xc.source;
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
+import com.huijimuhe.commonlayout.data.xc.xcFeedResponse;
+import com.huijimuhe.commonlayout.data.xc.xcFxResponse;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,13 +17,13 @@ import java.io.InputStreamReader;
  * This is a part of Group
  * enjoy
  */
-public class xcListRepository {
+public class xcFeedListRepository {
 
-    public void load(Context context, final IxcDataSource.ListLoadCallBack callback){
+    public void load(Context context, final IxcDataSource.FeedListLoadCallBack callback){
         String dummy=readDummy(context);
         try {
             JSONObject json=new JSONObject(dummy);
-            callback.onSuccess(new Gson().fromJson(json.getString("data"),xcIndexResponse.class));
+            callback.onSuccess(new Gson().fromJson(json.getString("data"),xcFeedResponse.class));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -30,7 +31,7 @@ public class xcListRepository {
 
     private String readDummy(Context context){
         try {
-            InputStreamReader inputReader = new InputStreamReader(context.getAssets().open("xc_list_dummy.txt"));
+            InputStreamReader inputReader = new InputStreamReader(context.getAssets().open("xc_feed_list_dummy.txt"));
             BufferedReader bufReader = new BufferedReader(inputReader);
             String line="";
             String Result="";

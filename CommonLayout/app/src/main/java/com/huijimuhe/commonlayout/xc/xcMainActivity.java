@@ -9,7 +9,7 @@ import com.huijimuhe.commonlayout.R;
 import com.huijimuhe.commonlayout.xc.list.xcMeFragment;
 import com.huijimuhe.commonlayout.xc.list.xcFXListFragment;
 import com.huijimuhe.commonlayout.xc.list.xcJXListFragment;
-import com.huijimuhe.commonlayout.xc.list.xcTDListFragment;
+import com.huijimuhe.commonlayout.xc.list.xcFeedListFragment;
 
 import me.majiajie.pagerbottomtabstrip.Controller;
 import me.majiajie.pagerbottomtabstrip.PagerBottomTabLayout;
@@ -66,7 +66,7 @@ public class xcMainActivity extends AppCompatActivity {
         //探店
         Fragment bt = getSupportFragmentManager().findFragmentByTag(String.valueOf(XC_TANDIAN));
         if (bt == null) {
-            bt = xcTDListFragment.newInstance();
+            bt = xcFeedListFragment.newInstance();
         }
         mFragments.append(XC_TANDIAN, bt);
 
@@ -102,6 +102,7 @@ public class xcMainActivity extends AppCompatActivity {
     }
 
     private void switchFragment(int position) {
+
         hideFragments();
         getSupportFragmentManager().beginTransaction().show(mFragments.get(position)).commit();
     }

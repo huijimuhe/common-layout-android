@@ -3,9 +3,9 @@ package com.huijimuhe.commonlayout.presenter.xc;
 import android.content.Context;
 
 import com.huijimuhe.commonlayout.data.xc.source.IxcDataSource;
-import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
+import com.huijimuhe.commonlayout.data.xc.source.xcJxListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcArticleGroup;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
+import com.huijimuhe.commonlayout.data.xc.xcJxResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +17,12 @@ import java.util.List;
  */
 public class xcJXListPresenter implements xcJXListContract.Presenter {
 
-    private xcListRepository mRepo;
+    private xcJxListRepository mRepo;
     private xcJXListContract.View mView;
     private int mTabIndex = 0;
-    private xcIndexResponse mData;
+    private xcJxResponse mData;
 
-    public xcJXListPresenter(xcJXListContract.View view, xcListRepository repo) {
+    public xcJXListPresenter(xcJXListContract.View view, xcJxListRepository repo) {
         this.mView = view;
         this.mRepo = repo;
     }
@@ -35,9 +35,9 @@ public class xcJXListPresenter implements xcJXListContract.Presenter {
     @Override
     public void load(Context context) {
         mView.showSwipe(true);
-        mRepo.load(context, new IxcDataSource.ListLoadCallBack() {
+        mRepo.load(context, new IxcDataSource.JxListLoadCallBack() {
             @Override
-            public void onSuccess(xcIndexResponse response) {
+            public void onSuccess(xcJxResponse response) {
                 mData = response;
                 switchAdapter(mTabIndex);
                 mView.updateHeader(mData);

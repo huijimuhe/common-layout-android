@@ -20,7 +20,7 @@ import java.util.List;
  * @Description: 显示1~N张图片的View
  */
 
-public class MultiImageView extends LinearLayout {
+public class NineGridLayout extends LinearLayout {
 	public static int MAX_WIDTH = 0;
 
 	// 照片的Url列表
@@ -42,11 +42,11 @@ public class MultiImageView extends LinearLayout {
 		mOnItemClickListener = onItemClickListener;
 	}
 
-	public MultiImageView(Context context) {
+	public NineGridLayout(Context context) {
 		super(context);
 	}
 
-	public MultiImageView(Context context, AttributeSet attrs) {
+	public NineGridLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 

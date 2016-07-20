@@ -16,10 +16,10 @@ import com.huijimuhe.commonlayout.adapter.base.AbstractRenderAdapter;
 import com.huijimuhe.commonlayout.adapter.xcJxListAdapter;
 import com.huijimuhe.commonlayout.adapter.xcJxHeaderSaleAdapter;
 import com.huijimuhe.commonlayout.adapter.xcJxHeaderWeekAdapter;
-import com.huijimuhe.commonlayout.data.xc.source.xcListRepository;
+import com.huijimuhe.commonlayout.data.xc.source.xcJxListRepository;
 import com.huijimuhe.commonlayout.data.xc.xcArticle;
 import com.huijimuhe.commonlayout.data.xc.xcArticleGroup;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
+import com.huijimuhe.commonlayout.data.xc.xcJxResponse;
 import com.huijimuhe.commonlayout.data.xc.xcSale;
 import com.huijimuhe.commonlayout.presenter.xc.xcJXListContract;
 import com.huijimuhe.commonlayout.presenter.xc.xcJXListPresenter;
@@ -63,7 +63,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcJXListCon
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new xcJXListPresenter(this, new xcListRepository());
+        mPresenter = new xcJXListPresenter(this, new xcJxListRepository());
         mPresenter.start();
 
         mTabView.setOnTabSelectedListener(new SwitchTabView.TabSelectedListener() {
@@ -126,7 +126,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcJXListCon
     }
 
     @Override
-    public void updateHeader(xcIndexResponse response) {
+    public void updateHeader(xcJxResponse response) {
         mHeaderView.update(response);
     }
 
@@ -240,7 +240,7 @@ public class xcJXListFragment extends xcAbLceListFragment implements xcJXListCon
             });
         }
 
-        public void update(xcIndexResponse dummy) {
+        public void update(xcJxResponse dummy) {
             /**Banner*/
             banner.initBanners(dummy.getAds_top());
             /**Sale list*/

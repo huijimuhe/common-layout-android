@@ -4,7 +4,7 @@ package com.huijimuhe.commonlayout.presenter.xc;
 import android.content.Context;
 
 import com.huijimuhe.commonlayout.data.xc.xcArticleGroup;
-import com.huijimuhe.commonlayout.data.xc.xcIndexResponse;
+import com.huijimuhe.commonlayout.data.xc.xcJxResponse;
 import com.huijimuhe.commonlayout.presenter.BasePresenter;
 import com.huijimuhe.commonlayout.presenter.BaseView;
 
@@ -22,7 +22,7 @@ public class xcJXListContract {
 
         void showContainer();
 
-        void updateHeader(xcIndexResponse response);
+        void updateHeader(xcJxResponse response);
 
         void updateList(List<xcArticleGroup> list, boolean isSectionHeaderShown);
 
