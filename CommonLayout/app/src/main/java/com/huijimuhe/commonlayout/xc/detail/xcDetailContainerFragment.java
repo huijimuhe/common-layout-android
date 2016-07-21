@@ -3,11 +3,18 @@ package com.huijimuhe.commonlayout.xc.detail;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.UiThread;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -19,9 +26,9 @@ import com.huijimuhe.commonlayout.adapter.xcArticleSectionAdapter;
 import com.huijimuhe.commonlayout.data.xc.xcComment;
 import com.huijimuhe.commonlayout.data.xc.xcDetailResponse;
 import com.huijimuhe.commonlayout.data.xc.xcArticleSection;
-import com.huijimuhe.commonlayout.ui.base.xcAbLceListFragment;
 import com.huijimuhe.commonlayout.utils.ViewUtility;
 import com.huijimuhe.commonlayout.widget.NoScrollRecyclerView;
+import com.huijimuhe.commonlayout.xc.list.xcFXListFragment;
 
 import java.util.ArrayList;
 
@@ -40,7 +47,12 @@ import java.util.ArrayList;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class xcDetailContainerFragment extends xcAbLceListFragment {
+public class xcDetailContainerFragment extends Fragment {
+
+    protected RecyclerView mRecyclerView;
+    protected RelativeLayout mCommentEditView;
+    protected AbstractRenderAdapter mAdapter;
+    protected LinearLayoutManager mLayoutManager;
 
     private HeaderViewWrapper mHeaderView;
     private xcDetailResponse mResponse;
@@ -52,30 +64,86 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
         return fragment;
     }
 
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View v = inflater.inflate(R.layout.xc_fragment_detail_container, null);
+
+
+        //recycler view
+        mRecyclerView = (RecyclerView) v.findViewById(R.id.article_comment_list);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+            }
+        });
+
+        //set adapter
+        mAdapter = getRecyclerAdapter();
+        mRecyclerView.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(new AbstractRenderAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(View view, int postion) {
+
+            }
+        });
+        mAdapter.setOnItemFunctionClickListener(new AbstractRenderAdapter.onItemFunctionClickListener() {
+            @Override
+            public void onClick(View view, int postion, int type) {
+
+            }
+        });
+
+        //评论
+        mCommentEditView = (RelativeLayout) v.findViewById(R.id.article_edit_container);
+        v.findViewById(R.id.article_comment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mCommentEditView.setVisibility(View.VISIBLE);
+                showKeyBoard();
+            }
+        });
+        mCommentEditView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setVisibility(View.GONE);
+                hiddenKeyBoard(view);
+            }
+        });
+        addHeaderView(v);
+        return v;
+    }
+
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
     }
 
+
     public void load(xcDetailResponse data) {
-        showContentView();
         this.mResponse = data;
         mAdapter.replace(mResponse.getComments());
         mHeaderView.init(mResponse);
     }
 
-    @Override
     public AbstractRenderAdapter getRecyclerAdapter() {
         return new xcCommentAdapter(new ArrayList<xcComment>());
     }
 
-    @Override
-    public void loadData() {
-
-    }
-
-    @Override
     public void addHeaderView(View root) {
         mHeaderView = new HeaderViewWrapper(getActivity());
         mHeaderView.setOnHeaderViewWrapperClickListener(new HeaderViewWrapperClickListener() {
@@ -95,16 +163,6 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
             }
         });
         mAdapter.setHeaderView(mHeaderView.getRoot());
-    }
-
-    @Override
-    public void onItemNormalClick(View view, int postion) {
-
-    }
-
-    @Override
-    public void onItemFunctionClick(View view, int postion, int type) {
-
     }
 
     private class HeaderViewWrapper {
@@ -217,5 +275,15 @@ public class xcDetailContainerFragment extends xcAbLceListFragment {
         void onSaleClick(View view);
 
         void onArticleClick(View view);
+    }
+
+    protected void hiddenKeyBoard(View v) {
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+    }
+
+    protected void showKeyBoard() {
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
     }
 }
